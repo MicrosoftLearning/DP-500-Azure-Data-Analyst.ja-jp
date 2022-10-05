@@ -6,7 +6,7 @@ lab:
 
 # <a name="analyze-data-in-a-data-lake-with-spark"></a>Spark を使用してデータ レイク内のデータを分析する
 
-Apache Spark is an open source engine for distributed data processing, and is widely used to explore, process, and analyze huge volumes of data in data lake storage. Spark is available as a processing option in many data platform products, including Azure HDInsight, Azure Databricks, and Azure Synapse Analytics on the Microsoft Azure cloud platform. One of the benefits of Spark is support for a wide range of programming languages, including Java, Scala, Python, and SQL; making Spark a very flexible solution for data processing workloads including data cleansing and manipulation, statistical analysis and machine learning, and data analytics and visualization.
+Apache Spark は、分散データ処理を行うためのオープン ソース エンジンであり、データ レイク ストレージ内の膨大な量のデータを探索、処理、分析するために広く使用されています。 Spark は、Azure HDInsight、Azure Databricks、Microsoft Azure クラウド プラットフォームの Azure Synapse Analytics など、多くのデータ プラットフォーム製品で処理オプションとして使用することができます。 Java、Scala、Python、SQL など、幅広いプログラミング言語に対応していることが Spark の利点の 1 つであり、これにより Spark は、データ クレンジングと操作、統計分析と機械学習、データ分析と視覚化など、データ処理ワークロードのソリューションとして高い柔軟性を実現しています。
 
 このラボは完了するまで、約 **45** 分かかります。
 
@@ -21,13 +21,13 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 この演習では、Azure Synapse Analytics ワークスペースをプロビジョニングするために、PowerShell スクリプトと ARM テンプレートを組み合わせて使用します。
 
 1. [Azure portal](https://portal.azure.com) (`https://portal.azure.com`) にサインインします。
-2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>PowerShell<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+2. ページ上部の検索バーの右側にある **[\>_]** ボタンを使用して、Azure portal に新しい Cloud Shell を作成します。メッセージが表示された場合は、***PowerShell*** 環境を選択して、ストレージを作成します。 次に示すように、Azure portal の下部にあるペインに、Cloud Shell のコマンド ライン インターフェイスが表示されます。
 
     ![Azure portal と Cloud Shell のペイン](../images/cloud-shell.png)
 
-    > **注**: *Bash* 環境が使用されているクラウド シェルを前に作成していた場合は、クラウド シェルのペインの左上にあるドロップダウン メニューを使用して、***PowerShell*** に変更します。
+    > **注**: 前に *Bash* 環境を使ってクラウド シェルを作成している場合は、そのクラウド シェル ペインの左上にあるドロップダウン メニューを使って、***PowerShell*** に変更します。
 
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the <bpt id="p1">**</bpt>&amp;#8212;<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;#9723;<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>X<ept id="p3">**</ept> icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the <bpt id="p1">[</bpt>Azure Cloud Shell documentation<ept id="p1">](https://docs.microsoft.com/azure/cloud-shell/overview)</ept>.
+3. ペインの上部にある区分線をドラッグして Cloud Shell のサイズを変更したり、ペインの右上にある **&#8212;** 、 **&#9723;** 、**X** アイコンを使用して、ペインを最小化または最大化したり、閉じたりすることができます。 Azure Cloud Shell の使い方について詳しくは、[Azure Cloud Shell のドキュメント](https://docs.microsoft.com/azure/cloud-shell/overview)をご覧ください。
 
 4. PowerShell のペインで、次のコマンドを入力して、リポジトリを複製します。
 
@@ -48,7 +48,7 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 
     > **注**: このパスワードは忘れないようにしてください。
 
-8. Apache Spark は、分散データ処理を行うためのオープン ソース エンジンであり、データ レイク ストレージ内の膨大な量のデータを探索、処理、分析するために広く使用されています。
+8. スクリプトの完了まで待ちます。通常、約 10 分かかりますが、さらに時間がかかる場合もあります。 待っている間、Azure Synapse Analytics ドキュメントの「[Azure Synapse Analytics での Apache Spark](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-overview)」の記事を確認してください。
 
 ## <a name="query-data-in-files"></a>ファイル内のデータのクエリを実行する
 
@@ -59,19 +59,19 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 1. スクリプトが完了したら、Azure portal で、作成された **dp500-*xxxxxxx*** リソース グループに移動して、Synapse ワークスペースを選択します。
 2. Synapse ワークスペースの **[概要]** ページの **[Synapse Studio を開く]** カードで **[開く]** を選択し、新しいブラウザー タブで Synapse Studio を開きます。メッセージが表示された場合はサインインします。
 3. Synapse Studio の左側にある **&rsaquo;&rsaquo;** アイコンを使用してメニューを展開します。これにより、リソースの管理とデータ分析タスクの実行に使用するさまざまなページが Synapse Studio 内に表示されます。
-4. Spark は、Azure HDInsight、Azure Databricks、Microsoft Azure クラウド プラットフォームの Azure Synapse Analytics など、多くのデータ プラットフォーム製品で処理オプションとして使用することができます。
+4. **[管理]** ページで、 **[Apache Spark pools]** タブを選択し、**spark*xxxxxxx*** のような名前の Spark プールがワークスペース内にプロビジョニングされていることに注意してください。 この Spark プールは、ワークスペースのデータ レイク ストレージ内のファイルからデータを読み込んで分析するために後で使用します。
 5. **[データ]** ページで **[リンク]** タブを表示して、**synapse*xxxxxxx* (Primary - datalake*xxxxxxx*)** のような名前の Azure Data Lake Storage Gen2 ストレージ アカウントへのリンクがワークスペースに含まれていることを確認します。
 6. ストレージ アカウントを展開して、そこに **files** という名前のファイル システム コンテナーが含まれていることを確認します。
-7. Java、Scala、Python、SQL など、幅広いプログラミング言語に対応していることが Spark の利点の 1 つであり、これにより Spark は、データ クレンジングと操作、統計分析と機械学習、データ分析と視覚化など、データ処理ワークロードのソリューションとして高い柔軟性を実現しています。
+7. この **files** コンテナーを選択し、そこに **sales** と **synapse** という名前のフォルダーが含まれていることに注意してください。 **synapse** フォルダーは、Azure Synapse によって使用されており、**sales** フォルダーには、これからクエリを実行するデータ ファイルが含まれています。
 8. **sales** フォルダーと **orders** フォルダーを開き、3 年間の売上データの .csv ファイルが **orders** フォルダーに含まれていることを確認します。
-9. Right-click any of the files and select <bpt id="p1">**</bpt>Preview<ept id="p1">**</ept> to see the data it contains. Note that the files do not contain a header row, so you can unselect the option to display column headers.
+9. いずれかのファイルを右クリックし、 **[プレビュー]** を選択して、そこに含まれているデータを表示します。 ファイルにはヘッダー行が含まれていないため、列ヘッダーを表示するには、オプションの選択を解除することに注意してください。
 
 ### <a name="use-spark-to-explore-data"></a>Spark を使用してデータを探索する
 
-1. Select any of the files in the <bpt id="p1">**</bpt>orders<ept id="p1">**</ept> folder, and then in the <bpt id="p2">**</bpt>New notebook<ept id="p2">**</ept> list on the toolbar, select <bpt id="p3">**</bpt>Load to DataFrame<ept id="p3">**</ept>. A dataframe is a structure in Spark that represents a tabular dataset.
-2. In the new <bpt id="p1">**</bpt>Notebook 1<ept id="p1">**</ept> tab that opens, in the <bpt id="p2">**</bpt>Attach to<ept id="p2">**</ept> list, select your Spark pool (*<bpt id="p3">*</bpt>spark<ept id="p3">*</ept>xxxxxxx***). Then use the <bpt id="p1">**</bpt>&amp;#9655; Run all<ept id="p1">**</ept> button to run all of the cells in the notebook (there's currently only one!).
+1. **orders** フォルダー内でいずれかのファイルを選択したら、ツールバーの **[新しいノートブック]** の一覧で **[データフレームに読み込む]** を選択します。 データフレームは、表形式データセットを表す Spark の構造です。
+2. 新しく開いた **[Notebook 1]** タブ内の **[アタッチ先]** の一覧で、Spark プール (**spark*xxxxxxx***) を選択します。 次に、 **&#9655; [すべて実行]** ボタンを使用して、ノートブック内のすべてのセル (現時点では 1 つしかありません) を実行します。
 
-    Since this is the first time you've run any Spark code in this session, the Spark pool must be started. This means that the first run in the session can take a few minutes. Subsequent runs will be quicker.
+    このセッション内で Spark コードを実行したのはこれが最初であるため、Spark プールを起動する必要があります。 これは、セッション内での最初の実行には、数分かかる場合があることを意味します。 それ以降は、短時間で実行できます。
 
 3. Spark セッションによる初期化を待っている間、生成されたコードを確認します。このコードは次のようになります。
 
@@ -84,8 +84,8 @@ Apache Spark is an open source engine for distributed data processing, and is wi
     display(df.limit(10))
     ```
 
-4. When the code has finished running, review the output beneath the cell in the notebook. It shows the first ten rows in the file you selected, with automatic column names in the form <bpt id="p1">**</bpt>_c0<ept id="p1">**</ept>, <bpt id="p2">**</bpt>_c1<ept id="p2">**</ept>, <bpt id="p3">**</bpt>_c2<ept id="p3">**</ept>, and so on.
-5. Modify the code so that the <bpt id="p1">**</bpt>spark.read.load<ept id="p1">**</ept> function reads data from <bpt id="p2">&lt;u&gt;</bpt>all<ept id="p2">&lt;/u&gt;</ept> of the CSV files in the folder, and the <bpt id="p3">**</bpt>display<ept id="p3">**</ept> function shows the first 100 rows. Your code should look like this (with <bpt id="p1">*</bpt>datalakexxxxxxx<ept id="p1">*</ept> matching the name of your data lake store):
+4. コードの実行が完了したら、ノートブック内のセルの下にある出力を確認します。 ここには、選択したファイル内の最初の 10 行と、 **_c0**、 **_c1**、 **_c2** などの形式の自動列名が表示されます。
+5. **spark.read.load** 関数によってフォルダー内の<u>すべて</u>の CSV ファイルからデータが読み取られ、**display** 関数によって最初の 100 行が表示されるように、コードを変更します。 コードは次のようになります (*datalakexxxxxxx* はデータ レイク ストアの名前に一致します)。
 
     ```Python
     %%pyspark
@@ -96,9 +96,9 @@ Apache Spark is an open source engine for distributed data processing, and is wi
 
 6. コード セルの左側にある **&#9655;** ボタンを使用して、そのセルのみを実行し、結果を確認します。
 
-    The dataframe now includes data from all of the files, but the column names are not useful. Spark uses a "schema-on-read" approach to try to determine appropriate data types for the columns based on the data they contain, and if a header row is present in a text file it can be used to identify the column names (by specifying a <bpt id="p1">**</bpt>header=True<ept id="p1">**</ept> parameter in the <bpt id="p2">**</bpt>load<ept id="p2">**</ept> function). Alternatively, you can define an explicit schema for the dataframe.
+    これで、このデータフレームにすべてのファイルからのデータが含まれるようになりましたが、列名はわかりにくいままです。 Spark では、"読み取り時のスキーマ" の方法を使用して、列に含まれているデータに基づき、列に適したデータ型を判断します。また、テキスト ファイル内にヘッダー行が存在する場合は、これを使用して列名を識別できます (この場合、**load** 関数に **header=True** パラメーターを指定します)。 または、データフレームの明示的なスキーマを定義することもできます。
 
-7. Modify the code as follows (replacing <bpt id="p1">*</bpt>datalakexxxxxxx<ept id="p1">*</ept>), to define an explicit schema for the dataframe that includes the column names and data types. Rerun the code in the cell.
+7. 列名とデータ型が含まれているデータフレームの明示的なスキーマを定義するには、コードを次のように変更します (*datalakexxxxxxx* を置き換えます)。 セル内のコードを再実行します。
 
     ```Python
     %%pyspark
@@ -121,13 +121,13 @@ Apache Spark is an open source engine for distributed data processing, and is wi
     display(df.limit(100))
     ```
 
-8. ページ上部の検索バーの右側にある **[\>_]** ボタンを使用して、Azure portal に新しい Cloud Shell を作成します。メッセージが表示された場合は、***PowerShell*** 環境を選択して、ストレージを作成します。
+8. 結果の下にある **[+ コード]** ボタンを使用して、ノートブックに新しいコード セルを追加します。 次に、新しいセルに次のコードを追加して、データフレームのスキーマを表示します。
 
     ```Python
     df.printSchema()
     ```
 
-9. 次に示すように、Azure portal の下部にあるペインに、Cloud Shell のコマンド ライン インターフェイスが表示されます。
+9. 新しいセルを実行し、そのデータフレームのスキーマが、定義した **orderSchema** に一致していることを確認します。 自動的に推論されたスキーマを持つデータフレームを使用する場合には、**printSchema** 関数が便利です。
 
 ## <a name="analyze-data-in-a-dataframe"></a>データフレーム内のデータを分析する
 
@@ -144,10 +144,10 @@ Spark の **dataframe** オブジェクトは、Python の Pandas データフ�
     display(customers.distinct())
     ```
 
-2. Run the new code cell, and review the results. Observe the following details:
+2. この新しいコード セルを実行し、結果を確認します。 次の詳細を確認します。
     - データフレームに対して操作を実行すると、その結果として新しいデータフレームが作成されます (この場合、**df** データフレームから列の特定のサブセットを選択することで、新しい **customers** データフレームが作成されます)
     - データフレームには、そこに含まれているデータの集計やフィルター処理に使用できる **count** や **distinct** などの関数が用意されています。
-    - The <ph id="ph1">`dataframe['Field1', 'Field2', ...]`</ph> syntax is a shorthand way of defining a subset of column. You can also use <bpt id="p1">**</bpt>select<ept id="p1">**</ept> method, so the first line of the code above could be written as <ph id="ph1">`customers = df.select("CustomerName", "Email")`</ph>
+    - `dataframe['Field1', 'Field2', ...]` 構文は、列のサブセットを簡単に定義できる方法です。 また、**select** メソッドを使用すると、上記のコードの最初の行を `customers = df.select("CustomerName", "Email")` のように記述することができます
 
 3. コードを次のように変更します。
 
@@ -158,7 +158,7 @@ Spark の **dataframe** オブジェクトは、Python の Pandas データフ�
     display(customers.distinct())
     ```
 
-4. Run the modified code to view the customers who have purchased the <bpt id="p1">*</bpt>Road-250 Red, 52<ept id="p1">*</ept> product. Note that you can "chain" multiple functions together so that the output of one function becomes the input for the next - in this case, the dataframe created by the <bpt id="p1">**</bpt>select<ept id="p1">**</ept> method is the source dataframe for the <bpt id="p2">**</bpt>where<ept id="p2">**</ept> method that is used to apply filtering criteria.
+4. この変更したコードを実行すると、"*Road-250 Red, 52*" という製品を購入した顧客が表示されます。 複数の関数を "チェーン" にすると、1 つの関数の出力が次の関数の入力になることに注意してください。この場合、**select** メソッドによって作成されたデータフレームは、フィルター条件を適用するために使用される **where** メソッドのソース データフレームとなります。
 
 ### <a name="aggregate-and-group-data-in-a-dataframe"></a>データフレーム内のデータを集計してグループ化する
 
@@ -169,7 +169,7 @@ Spark の **dataframe** オブジェクトは、Python の Pandas データフ�
     display(productSales)
     ```
 
-2. ペインの上部にある区分線をドラッグして Cloud Shell のサイズを変更したり、ペインの右上にある **&#8212;** 、 **&#9723;** 、**X** アイコンを使用して、ペインを最小化または最大化したり、閉じたりすることができます。
+2. 追加したコード セルを実行し、その結果が、製品ごとにグループ化された注文数の合計を示していることに注意してください。 **groupBy** メソッドを使用すると、*Item* ごとに行がグループ化されます。その後の **sum** 集計関数は、残りのすべての数値列に適用されます (この場合は *Quantity*)
 
 3. ノートブックに新しいコード セルをもう 1 つ追加し、そこに次のコードを入力します。
 
@@ -178,15 +178,15 @@ Spark の **dataframe** オブジェクトは、Python の Pandas データフ�
     display(yearlySales)
     ```
 
-4. Azure Cloud Shell の使い方について詳しくは、[Azure Cloud Shell のドキュメント](https://docs.microsoft.com/azure/cloud-shell/overview)をご覧ください。
+4. 追加したコード セルを実行し、その結果が 1 年あたりの販売注文数を示していることに注意してください。 **select** メソッドには *OrderDate* フィールドの year コンポーネントを抽出するための SQL **year** 関数が含まれており、抽出された year 値に列名を割り当てるために **alias** メソッドが使用されていることに注意してください。 次に、データは派生 *Year* 列によってグループ化され、各グループの行数が計算されます。その後、結果として生成されたデータフレームを並べ替えるために、最後に **orderBy** メソッドが使用されます。
 
 ## <a name="query-data-using-spark-sql"></a>Spark SQL を使用してデータのクエリを実行する
 
-As you've seen, the native methods of the dataframe object enable you to query and analyze data quite effectively. However, many data analysts are more comfortable working with SQL syntax. Spark SQL is a SQL language API in Spark that you can use to run SQL statements, or even persist data in relational tables.
+ここまで確認してきたように、データフレーム オブジェクトのネイティブ メソッドを使用すると、データのクエリの実行と分析を効率的に行うことができます。 ただし、SQL 構文の方が扱いやすいと考えるデータ アナリストも多くいます。 Spark SQL は、Spark の SQL 言語 API であり、SQL ステートメントの実行だけではなく、リレーショナル テーブル内でのデータの永続化にも使用できます。
 
 ### <a name="use-spark-sql-in-pyspark-code"></a>PySpark コードで Spark SQL を使用する
 
-The default language in Azure Synapse Studio notebooks is PySpark, which is a Spark-based Python runtime. Within this runtime, you can use the <bpt id="p1">**</bpt>spark.sql<ept id="p1">**</ept> library to embed Spark SQL syntax within your Python code, and work with SQL constructs such as tables and views.
+Azure Synapse Studio ノートブックの既定の言語は、Spark ベースの Python ランタイムである PySpark です。 このランタイム内に **spark.sql** ライブラリを使用すると、Python コード内に Spark SQL 構文を埋め込んだり、テーブルやビューなどの SQL コンストラクトを扱ったりすることができます。
 
 1. ノートブックに新しいコード セルを追加し、そこに次のコードを入力します。
 
@@ -197,8 +197,8 @@ The default language in Azure Synapse Studio notebooks is PySpark, which is a Sp
     display(spark_df)
     ```
 
-2. Run the cell and review the results. Observe that:
-    - The code persists the data in the <bpt id="p1">**</bpt>df<ept id="p1">**</ept> dataframe as a temporary view named <bpt id="p2">**</bpt>salesorders<ept id="p2">**</ept>. Spark SQL supports the use of temporary views or persisted tables as sources for SQL queries.
+2. このセルを実行し、結果を確認します。 次の点に注意してください。
+    - このコードによって、**df** データフレーム内のデータが、**salesorders** という名前の一時ビューとして永続化されます。 Spark SQL は、一時ビューまたは永続化されたテーブルを SQL クエリのソースとして使用することをサポートしています。
     - 次に、**spark.sql** メソッドを使用して、**salesorders** ビューに対して SQL クエリが実行されます。
     - クエリの結果は、データフレームに格納されます。
 
@@ -217,7 +217,7 @@ PySpark コードが含まれているセルに SQL ステートメントを埋�
     ORDER BY OrderYear;
     ```
 
-2. Run the cell and review the results. Observe that:
+2. このセルを実行し、結果を確認します。 次の点に注意してください。
     - セルの先頭にある `%%sql` 行 (*magic* と呼ばれます) は、このセル内でこのコードを実行するには、PySpark ではなく、Spark SQL 言語ランタイムを使用する必要があることを示しています。
     - SQL コードを使用すると、前に PySpark を使用して作成した **salesorder** ビューが参照されます。
     - SQL クエリからの出力は、セルの下に自動的に結果として表示されます。
@@ -226,7 +226,7 @@ PySpark コードが含まれているセルに SQL ステートメントを埋�
 
 ## <a name="visualize-data-with-spark"></a>Spark を使用してデータを視覚化する
 
-A picture is proverbially worth a thousand words, and a chart is often better than a thousand rows of data. While notebooks in Azure Synapse Analytics include a built in chart view for data that is displayed from a dataframe or Spark SQL query, it is not designed for comprehensive charting. However, you can use Python graphics libraries like <bpt id="p1">**</bpt>matplotlib<ept id="p1">**</ept> and <bpt id="p2">**</bpt>seaborn<ept id="p2">**</ept> to create charts from data in dataframes.
+画像が何千もの言葉を語り、表が何千行にも及ぶデータよりもわかりやすいことは、だれもが知っています。 Azure Synapse Analytics のノートブックには、データフレームまたは Spark SQL クエリから表示されるデータのグラフ ビューが組み込まれていますが、これは包括的なグラフ作成を目的としたものではありません。 ただし、**matplotlib** や **seaborn** などの Python グラフィックス ライブラリを使用して、データフレーム内のデータからグラフを作成することができます。
 
 ### <a name="view-results-as-a-chart"></a>結果をグラフで表示する
 
@@ -239,7 +239,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 2. コードを実行し、前に作成した **salesorders** ビューからのデータが返されることを確認します。
 3. セルの下の結果セクションで、 **[ビュー]** オプションを **[表]** から **[グラフ]** に変更します。
-4. スクリプトの完了まで待ちます。通常、約 10 分かかりますが、さらに時間がかかる場合もあります。
+4. グラフの右上にある **[ビュー オプション]** ボタンを使用して、グラフのオプション ペインを表示します。 オプションを次のように設定し、 **[適用]** を選択します。
     - **グラフの種類**: 横棒グラフ
     - **キー**: Item
     - **値**: Quantity
@@ -267,7 +267,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
 
 2. コードを実行し、年間収益を含む Spark データフレームが返されることを確認します。
 
-    待っている間、Azure Synapse Analytics ドキュメントの「[Azure Synapse Analytics での Apache Spark](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-overview)」の記事を確認してください。
+    データをグラフとして視覚化するには、まず **matplotlib** Python ライブラリを使用します。 このライブラリは、他の多くのライブラリに基づいたコア プロット ライブラリであり、これを使用するとグラフ作成時の柔軟性が大幅に向上します。
 
 3. ノートブックに新しいコード セルを追加し、そこに次のコードを追加します。
 
@@ -284,9 +284,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-4. Run the cell and review the results, which consist of a column chart with the total gross revenue for each year. Note the following features of the code used to produce this chart:
+4. このセルを実行し、結果を確認します。結果には、各年の総収益が縦棒グラフで示されています。 このグラフの生成に使用されているコードの次の機能に注目してください。
     - **matplotlib** ライブラリには *Pandas* データフレームが必要であるため、Spark SQL クエリによって返される *Spark* データフレームをこの形式に変換する必要があります。
-    - At the core of the <bpt id="p1">**</bpt>matplotlib<ept id="p1">**</ept> library is the <bpt id="p2">**</bpt>pyplot<ept id="p2">**</ept> object. This is the foundation for most plotting functionality.
+    - **matplotlib** ライブラリの中核となるのは、**pyplot** オブジェクトです。 これは、ほとんどのプロット機能の基礎となります。
     - 既定の設定では、使用可能なグラフが生成されますが、カスタマイズすべき範囲が大幅に増えます。
 
 5. コードを次のように変更して、グラフをプロットします。
@@ -309,9 +309,9 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-6. Re-run the code cell and view the results. The chart now includes a little more information.
+6. コード セルを再実行し、結果を表示します。 これで、もう少し詳細な情報がグラフに含まれるようになりました。
 
-    A plot is technically contained with a <bpt id="p1">**</bpt>Figure<ept id="p1">**</ept>. In the previous examples, the figure was created implicitly for you; but you can create it explicitly.
+    プロットは、技術的に**図**に含まれています。 前の例では、図が暗黙的に作成されていましたが、明示的に作成することもできます。
 
 7. コードを次のように変更して、グラフをプロットします。
 
@@ -336,7 +336,7 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-8. Re-run the code cell and view the results. The figure determines the shape and size of the plot.
+8. コード セルを再実行し、結果を表示します。 図によって、プロットの形状とサイズが決まります。
 
     図には複数のサブプロットが含まれており、それぞれに独自の "軸" があります**。
 
@@ -366,13 +366,13 @@ A picture is proverbially worth a thousand words, and a chart is often better th
     plt.show()
     ```
 
-10. Re-run the code cell and view the results. The figure contains the subplots specified in the code.
+10. コード セルを再実行し、結果を表示します。 図には、コード内に指定したサブプロットが含まれています。
 
 > **注**: matplotlib を使用したプロットの詳細については、[matplotlib のドキュメント](https://matplotlib.org/)を参照してください。
 
 ### <a name="use-the-seaborn-library"></a>**seaborn** ライブラリを使用する
 
-While <bpt id="p1">**</bpt>matplotlib<ept id="p1">**</ept> enables you to create complex charts of multiple types, it can require some complex code to achieve the best results. For this reason, over the years, many new libraries have been built on the base of matplotlib to abstract its complexity and enhance its capabilities. One such library is <bpt id="p1">**</bpt>seaborn<ept id="p1">**</ept>.
+**matplotlib** を使用すると、複数の種類の複雑なグラフを作成することができますが、優れた結果を得るには、複雑なコードを必要とする場合があります。 このため、複雑性の抽象化と機能の強化を目的に、matplotlib のベース上に数多くの新しいライブラリが何年もかけて構築されてきました。 そのようなライブラリの 1 つに **seaborn** があります。
 
 1. ノートブックに新しいコード セルを追加し、そこに次のコードを入力します。
 

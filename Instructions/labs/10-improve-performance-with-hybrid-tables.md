@@ -41,11 +41,11 @@ lab:
     
     `git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
    
-1. When the repository has been cloned, open the D drive in the file explorer to ensure the files have been downloaded. Do not close the command prompt window, you will use it in the next task, Deploy an Azure SQL Database.
+1. リポジトリが複製されたら、エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。 **コマンド プロンプト ウィンドウを閉じます**。
 
 ### <a name="deploy-an-azure-sql-database"></a>Azure SQL Database をデプロイする 
 
-In this task, you'll create an Azure SQL database that you'll use as a data source for Power BI. Running the setup script will create the Azure SQL database server and load the AdventureWorksDW2022 database.
+このタスクでは、Power BI のデータ ソースとして使用する Azure SQL データベースを作成します。 セットアップ スクリプトを実行すると、Azure SQL データベース サーバーが作成され、AdventureWorksDW2022 データベースが読み込まれます。
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
 
@@ -54,7 +54,7 @@ In this task, you'll create an Azure SQL database that you'll use as a data sour
 2. **D:\DP500\Allfiles\10** フォルダーに移動します。
 
 3. **setup2.ps1** ファイル スクリプトをダブルクリックして開きます。
-    - Read through the script in notepad if you're interested in understanding what resources the script is setting up. The lines beginning with # denote what the script is doing.
+    - スクリプトによって設定されるリソースを理解したい場合は、メモ帳でスクリプトをお読みください。 # で始まる行は、スクリプトの実行内容を示しています。
     - スクリプトを閉じます。
 
 5. タスク バーの検索ボックスに、「`PowerShell`」と入力します。  
@@ -76,7 +76,7 @@ In this task, you'll create an Azure SQL database that you'll use as a data sour
 
     ![](../images/powershell-script.png)
 
-2. When prompted, enter your <bpt id="p1">**</bpt>Azure account username<ept id="p1">**</ept>, <bpt id="p2">**</bpt>password<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>resource group name<ept id="p3">**</ept>. Press <bpt id="p1">**</bpt>Enter<ept id="p1">**</ept>. 
+2. メッセージが表示されたら、**Azure アカウントのユーザー名**、**パスワード**、**リソース グループ名**を入力します。 **Enter** キーを押します。 
 
     ![](../images/powershell-enter-account-info.png)
 
@@ -87,7 +87,7 @@ In this task, you'll create an Azure SQL database that you'll use as a data sour
 
 ### <a name="set-up-the-azure-sql-database"></a>Azure SQL Database を設定する
 
-In this task, you will set up the Azure SQL Database to allow connections from your virtual machine's (VM's) IP address. This script will take about 10 minutes to run after you enter your username, password, and resource group.
+このタスクでは、Azure SQL Database を、仮想マシン (VM) の IP アドレスからの接続を許可するように設定します。 ユーザー名、パスワード、リソース グループを入力した後、このスクリプトの実行には約 10 分かかります。
 
 1. Web ブラウザーで、[https://portal.azure.com](https://portal.azure.com/) にアクセスします。
 
@@ -115,7 +115,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image12.png)
 
-8. Keep the Azure portal web browser session open. You will need to copy the database connection string in the <bpt id="p1">**</bpt>Set up Power BI Desktop task<ept id="p1">**</ept>.
+8. Azure portal Web ブラウザー セッションを開いたままにしておきます。 **「Power BI Desktop を設定する」タスク**でデータベース接続文字列をコピーする必要があります。
 
 ### <a name="set-up-the-power-bi-service"></a>Power BI サービスを設定する
 
@@ -139,17 +139,17 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 5. 残りのタスクをすべて行って、試用版のセットアップを完了します。
 
-    "ヒント: Power BI の Web ブラウザー エクスペリエンスは、**Power BI サービス**と呼ばれます。"**
+    ヒント: Power BI の Web ブラウザー エクスペリエンスは、**Power BI サービス**と呼ばれます。**
 
 ### <a name="create-a-workspace"></a>ワークスペースの作成
 
 このタスクでは、ワークスペースを作成します。
 
-1. Power BI サービスでワークスペースを作成するには、**ナビゲーション** ペイン (左側にあります) で **[ワークスペース]** 、 **[ワークスペースの作成]** の順に選択します。
+1. Power BI サービスでワークスペースを作成するには、**ナビゲーション** ウィンドウ (左側) で **[ワークスペース]** を選んでから、 **[ワークスペースの作成]** を選びます。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image3.png)
 
-2. **[ワークスペースの作成]** ペイン (右側にあります) で、 **[ワークスペース名]** ボックスにワークスペースの名前を入力します。
+2. **[ワークスペースの作成]** ペイン (右側) で、 **[ワークスペース名]** ボックスにワークスペースの名前を入力します。
 
     "ワークスペース名はテナント内で一意である必要があります。"**
 
@@ -191,7 +191,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15.png)
 
-6. In the <bpt id="p1">**</bpt>SQL Server database<ept id="p1">**</ept> window, in the <bpt id="p2">**</bpt>Server<ept id="p2">**</ept> box, replace the text with the lab Azure SQL Database server. This is located in the Azure portal, SQL databases.
+6. **[SQL Server データベース]** ウィンドウの **[サーバー]** ボックスで、テキストをラボの Azure SQL Database サーバーに置き換えます。 これは、Azure portal の [SQL データベース] にあります。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15a.png)
 
@@ -215,7 +215,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image15b.png)
 
-11.  Select <bpt id="p1">**</bpt>OK<ept id="p1">**</ept>.
+11.  **[OK]** を選択します。
     ![](../images/dp500-improve-performance-with-hybrid-tables-image19.png)
 
 12. **[データ ソース設定]** ウィンドウで、 **[閉じる]** を選択します。
@@ -234,7 +234,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
 17. **[保存]** を選択します。
 
-18. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+18. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使ってサインイン プロセスを完了します。
 
     "重要: Power BI サービスへのサインインに使用したものと同じ資格情報を使用する必要があります。"**
 
@@ -446,11 +446,15 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image54.png)
 
-5. ウィンドウで、TBC
+5. このウィンドウで、ユーザー名とパスワードを入力し、プライバシー レベルを [組織] に設定します。
+       
+    ユーザー名: `sqladmin`
 
-6. TODO: スクリーンショット
+    パスワード: `P@ssw0rd01`
 
-7. **[サインイン]** を選択します。
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image54b.png)
+
+6. **[サインイン]** を選択します。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image55.png)
 
@@ -566,7 +570,7 @@ In this task, you will set up the Azure SQL Database to allow connections from y
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image70.png)
 
-5. **[サーバーに接続]** ウィンドウで、 **[サーバー名]** ドロップダウン リストがラボの Azure SQL Database サーバーに設定されていることを確認します。
+5. **[データベース エンジンに接続]** ウィンドウで、 **[サーバー名]** ドロップダウン リストがラボの Azure SQL Database サーバーに設定されていることを確認します。
 
 6. **[認証]** ドロップダウン リストで、 **[Azure Active Directory - パスワード]** を選択します。
 
