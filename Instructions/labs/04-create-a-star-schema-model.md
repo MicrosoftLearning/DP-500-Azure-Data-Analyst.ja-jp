@@ -10,7 +10,7 @@ lab:
 
 **このラボの推定所要時間: 30 分**
 
-In this lab, you will use Power BI Desktop to develop a data model over the Azure Synapse Adventure Works data warehouse. The data model will allow you to publish a semantic layer over the data warehouse.
+このラボでは、Power BI Desktop を使って、Azure Synapse Adventure Works データ ウェアハウスを介してデータ モデルを開発します。 データ モデルを使用すると、データ ウェアハウスを介してセマンティック レイヤーを公開できます。
 
 このラボでは、次の作業を行う方法について説明します。
 
@@ -26,25 +26,25 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
 
 ### <a name="load-data-into-azure-synapse-analytics"></a>Azure Synapse Analytics にデータを読み込む
 
-   > **注**: Git クローンを使ってデータを Azure Synapse Analytics に既に読み込んでいる場合は、このタスクをスキップして、「**Power BI を設定する**」に進むことができます。
+   > **注**: git クローンを使ってデータを Azure Synapse Analytics に既に読み込んでいる場合は、このタスクをスキップして **Power BI のセットアップ**に進んでかまいません。
 
 1. VM の右側にある [リソース] タブのログイン情報を使って、[Azure portal](https://portal.azure.com) にサインインします。
-2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>PowerShell<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+2. ページ上部の検索バーの右側にある **[\>_]** ボタンを使用して、Azure portal に新しい Cloud Shell を作成します。メッセージが表示されたら、***PowerShell*** 環境を選んで、ストレージを作成します。 次に示すように、Azure portal の下部にあるペインに、Cloud Shell のコマンド ライン インターフェイスが表示されます。
 
     ![Azure portal と Cloud Shell のペイン](../images/cloud-shell.png)
 
-    > **注**: 前に *Bash* 環境を使ってクラウド シェルを作成した場合は、そのクラウド シェル ペインの左上にあるドロップダウン メニューを使って、***PowerShell*** に変更します。
+    > **注**: 前に *Bash* 環境を使ってクラウド シェルを作成している場合は、そのクラウド シェル ペインの左上にあるドロップダウン メニューを使って、***PowerShell*** に変更します。
 
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the <bpt id="p1">**</bpt>&amp;#8212;<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;#9723;<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>X<ept id="p3">**</ept> icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the <bpt id="p1">[</bpt>Azure Cloud Shell documentation<ept id="p1">](https://docs.microsoft.com/azure/cloud-shell/overview)</ept>.
+3. ペインの上部にある区分線をドラッグして Cloud Shell のサイズを変更したり、ペインの右上にある **&#8212;** 、 **&#9723;** 、**X** アイコンを使用して、ペインを最小化または最大化したり、閉じたりすることができます。 Azure Cloud Shell の使い方について詳しくは、[Azure Cloud Shell のドキュメント](https://docs.microsoft.com/azure/cloud-shell/overview)をご覧ください。
 
-4. PowerShell ペインで、次のコマンドを入力して、このリポジトリを複製します。
+4. PowerShell ペインで、次のコマンドを入力して、このリポジトリをクローンします。
 
     ```
     rm -r dp500 -f
     git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst dp500
     ```
 
-5. リポジトリが複製されたら、次のコマンドを入力して **setup** フォルダーに変更し、そこに含まれている **setup.ps1** スクリプトを実行します。
+5. リポジトリがクローンされたら、次のコマンドを入力して **setup** フォルダーに変更し、そこに含まれている **setup.ps1** スクリプトを実行します。
 
     ```
     cd dp500/Allfiles/04
@@ -56,7 +56,7 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
     > **注**: このパスワードは忘れないようにしてください。
 
 7. スクリプトの完了まで待ちます。通常、約 20 分かかりますが、さらに時間がかかる場合もあります。
-8. After creating the Synapse workspace and SQL Pool and loading the data, the script pauses the pool to prevent unnecessary Azure charges. When you're ready to work with your data in Azure Synapse Analytics, you'll need to resume the SQL Pool.
+8. Synapse ワークスペースと SQL プールを作成して、データを読み込んだ後、Azure の不要な料金を防ぐため、プールはスクリプトによって一時停止されます。 Azure Synapse Analytics でデータを使用する準備ができたら、SQL プールを再開する必要があります。
 
 ### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
 
@@ -91,14 +91,14 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
 
     ![](../images/dp500-create-a-star-schema-model-image2.png)
 
-3. At the top-right corner of Power BI Desktop, if you're not already signed in, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+3. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選択します。 ラボの資格情報を使用してサインイン プロセスを完了します。
 
     ![](../images/dp500-create-a-star-schema-model-image3.png)
-4. このラボでは、Power BI Desktop を使って、Azure Synapse Adventure Works データ ウェアハウスを介してデータ モデルを開発します。
+4. Microsoft Edge の Power BI サインアップ ページにリダイレクトされます。 **[続行]** を選択してサインアップを完了します。
 
     ![](../images/dp500-create-a-star-schema-model-image3b.png)
 
-5. データ モデルを使用すると、データ ウェアハウスを介してセマンティック レイヤーを公開できます。
+5. 10 桁の電話番号を入力し、 **[開始]** を選択します。 **[開始]** をもう一度選択します。 Power BI にリダイレクトされます。
 
 1. 右上にあるプロファイル アイコンを選択し、 **[無料体験する]** を選択します。
 
@@ -122,11 +122,11 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
 
     ![](../images/dp500-create-a-star-schema-model-image2b.png)
 
-1. Navigate back to Power BI Desktop. If you see <bpt id="p1">**</bpt>Sign in<ept id="p1">**</ept> in the top right corner of the screen, sign-in again using the credentials provided on the Resources tab of the lab environment. If you are already signed in, proceed to the next step.
+1. Power BI Desktop に戻ります。 画面の右上隅に "**サインイン**" が表示されたら、ラボ環境の [リソース] タブで提供されている資格情報を使用してもう一度サインインします。 既にサインインしている場合は、次の手順に進みます。
 
     <img width="80" alt="image" src="https://user-images.githubusercontent.com/77289548/166337862-538a1900-ec67-44d1-905f-d404c5b0a58a.png">
 
-1. Go to Power BI Desktop and select <bpt id="p1">**</bpt>File<ept id="p1">**</ept> then <bpt id="p2">**</bpt>Options and settings<ept id="p2">**</ept> then <bpt id="p3">**</bpt>Options<ept id="p3">**</ept> then <bpt id="p4">**</bpt>Security<ept id="p4">**</ept> and under Authentication Browser check <bpt id="p5">**</bpt>Use my default web browser<ept id="p5">**</ept> and select <bpt id="p6">**</bpt>OK<ept id="p6">**</ept>. Close Power BI Desktop. Do not save your file.
+1. Power BI Desktop に移動し、 **[ファイル]** 、 **[オプションと設定]** 、 **[オプション]** 、 **[セキュリティ]** の順に選択し、[認証ブラウザー] で **[既定の Web ブラウザーを使用する]** をオンにして **[OK]** を選択します。 Power BI Desktop を閉じます。 ファイルを保存しないでください。
 
     "次の演習で Power BI Desktop をもう一度開きます。"**
 
@@ -138,7 +138,7 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
 
 1. ラボの資格情報を使用してサインイン プロセスを完了します。
 
-1. Select <bpt id="p1">**</bpt>Azure Synapse Analytics<ept id="p1">**</ept> from Azure services. Select your Synapse workspace.
+1. Azure サービスから **[Azure Synapse Analytics]** を選択します。 Synapse ワークスペースを選択します。
 
    ![](../images/dp500-create-a-star-schema-model-image3c.png)
 
@@ -185,7 +185,7 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
 
     ![](../images/dp500-create-a-star-schema-model-image4.png)
 
-3. In the <bpt id="p1">**</bpt>Develop<ept id="p1">**</ept> pane, expand <bpt id="p2">**</bpt>Power BI<ept id="p2">**</ept>, then expand the workspace, and then select <bpt id="p3">**</bpt>Power BI datasets<ept id="p3">**</ept>. If not present, Click <bpt id="p1">**</bpt>Publish all<ept id="p1">**</ept> to publish Workspace and refresh the browser.
+3. **[開発]** ペインで、 **[Power BI]** を展開し、ワークスペースを展開して、 **[Power BI データ セット]** を選択します。 表示されない場合は、 **[すべて公開]** をクリックしてワークスペースを公開し、ブラウザーを更新します。
 
     ![](../images/dp500-create-a-star-schema-model-image5.png)
 
@@ -278,7 +278,7 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
     ![](../images/dp500-create-a-star-schema-model-image18.png)
 
 
-14. 不要な列を削除するには、 **[ホーム]** リボン タブの **[列の管理]** グループ内から、 **[列の選択]** アイコンを選択します。
+14. 必要のない列を削除するには、 **[ホーム]** リボン タブの **[列の管理]** グループ内から、 **[列の選択]** アイコンを選びます。
 
     ![](../images/dp500-create-a-star-schema-model-image19.png)
 
@@ -307,11 +307,11 @@ In this lab, you will use Power BI Desktop to develop a data model over the Azur
 
     ![](../images/dp500-create-a-star-schema-model-image22.png)
 
-18. **[クエリの設定]** ペインの **[適用されたステップ]** の一覧で、他の列を削除するためのステップが追加されたことを確認します。
+18. **[クエリの設定]** ウィンドウの **[適用したステップ]** の一覧で、他の列を削除するためのステップが追加されたことを確認します。
 
     ![](../images/dp500-create-a-star-schema-model-image23.png)
 
-    "Power Query により、目的の構造とデータを実現するためのステップが定義されます。各変換は、クエリ ロジックのステップになります。"**
+    Power Query により、目的の構造とデータを実現するための手順が定義されます。各変換は、クエリ ロジックのステップになります。**
 
 19. **FullDateAlternateKey** 列の名前を変更するには、**FullDateAlternateKey** 列のヘッダーをダブルクリックします。
 

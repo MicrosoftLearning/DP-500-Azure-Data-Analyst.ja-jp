@@ -10,7 +10,7 @@ lab:
 
 **このラボの推定所要時間: 45 分**
 
-In this lab, you will create a dataflow to deliver date dimension data sourced from the Azure Synapse Adventure Works data warehouse. The dataflow will provide a consistent definition of date-related data for use by the organization's business analysts.
+このラボでは、Azure Synapse の Adventure Works データ ウェアハウスから供給された日付ディメンション データを配信するデータフローを作成します。 このデータフローは、組織のビジネス アナリストが使用する日付関連データの一貫した定義を提供します。
 
 このラボでは、次の作業を行う方法について説明します。
 
@@ -27,13 +27,13 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
    > **注**: git クローンを使ってデータを Azure Synapse Analytics に既に読み込んでいる場合は、このタスクをスキップして **Power BI のセットアップ**に進んでかまいません。
 
 1. VM の右側にある [リソース] タブのログイン情報を使って、[Azure portal](https://portal.azure.com) にサインインします。
-2. Use the <bpt id="p1">**</bpt>[<ph id="ph1">\&gt;</ph>_]<ept id="p1">**</ept> button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a <bpt id="p2">***</bpt>PowerShell<ept id="p2">***</ept> environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+2. ページ上部の検索バーの右側にある **[\>_]** ボタンを使用して、Azure portal に新しい Cloud Shell を作成します。メッセージが表示されたら、***PowerShell*** 環境を選んで、ストレージを作成します。 次に示すように、Azure portal の下部にあるペインに、Cloud Shell のコマンド ライン インターフェイスが表示されます。
 
     ![Azure portal と Cloud Shell のペイン](../images/cloud-shell.png)
 
     > **注**: 前に *Bash* 環境を使ってクラウド シェルを作成している場合は、そのクラウド シェル ペインの左上にあるドロップダウン メニューを使って、***PowerShell*** に変更します。
 
-3. Note that you can resize the cloud shell by dragging the separator bar at the top of the pane, or by using the <bpt id="p1">**</bpt>&amp;#8212;<ept id="p1">**</ept>, <bpt id="p2">**</bpt>&amp;#9723;<ept id="p2">**</ept>, and <bpt id="p3">**</bpt>X<ept id="p3">**</ept> icons at the top right of the pane to minimize, maximize, and close the pane. For more information about using the Azure Cloud Shell, see the <bpt id="p1">[</bpt>Azure Cloud Shell documentation<ept id="p1">](https://docs.microsoft.com/azure/cloud-shell/overview)</ept>.
+3. ペインの上部にある区分線をドラッグして Cloud Shell のサイズを変更したり、ペインの右上にある **&#8212;** 、 **&#9723;** 、**X** アイコンを使用して、ペインを最小化または最大化したり、閉じたりすることができます。 Azure Cloud Shell の使い方について詳しくは、[Azure Cloud Shell のドキュメント](https://docs.microsoft.com/azure/cloud-shell/overview)をご覧ください。
 
 4. PowerShell ペインで、次のコマンドを入力して、このリポジトリをクローンします。
 
@@ -55,7 +55,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 7. スクリプトの完了まで待ちます。通常、約 20 分かかりますが、さらに時間がかかる場合もあります。
 
-1. After creating the Synapse workspace and SQL Pool and loading the data, the script pauses the pool to prevent unnecessary Azure charges. When you're ready to work with your data in Azure Synapse Analytics, you'll need to resume the SQL Pool.
+1. Synapse ワークスペースと SQL プールを作成して、データを読み込んだ後、Azure の不要な料金を防ぐため、プールはスクリプトによって一時停止されます。 Azure Synapse Analytics でデータを使用する準備ができたら、SQL プールを再開する必要があります。
 
 ### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
 
@@ -78,7 +78,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
     git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500
     `
    
-2. リポジトリをクローンしたら、コマンド プロンプト ウィンドウを閉じます。 
+2. リポジトリが複製されたら、コマンド プロンプト ウィンドウを閉じます。 
    
 3. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
@@ -94,7 +94,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 1. 開発済みの Power BI Desktop ファイルを開くには、**Sales Analysis - Create a dataflow.pbix** ファイルをダブルクリックします。
 
-1. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+1. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使ってサインイン プロセスを完了します。
 
     ![](../images/dp500-create-a-dataflow-image2.png)
 
@@ -122,7 +122,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
     ![](../images/dp500-create-a-dataflow-image3.png)
 
-1. メッセージが表示されたら、 **[無料体験する]** を選びます。
+1. メッセージが表示されたら、 **[無料体験する]** を選択します。
 
     ![](../images/dp500-create-a-dataflow-image4.png)
 
@@ -163,9 +163,11 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 1. 検索バーを使って、Azure Synapse Analytics を見つけます。 
 
-1. このラボでは、Azure Synapse の Adventure Works データ ウェアハウスから供給された日付ディメンション データを配信するデータフローを作成します。
+1. Azure Synapse Analytics のインスタンスを選びます。
+    ![](../images/synapse-instance.png)
 
-1. このデータフローは、組織のビジネス アナリストが使用する日付関連データの一貫した定義を提供します。
+1. 専用の SQL プールを見つけて選びます。
+    ![](../images/dedicated-sql-pool.png)
 
 1. 専用の SQL プールを再開します。
 
@@ -175,7 +177,7 @@ In this lab, you will create a dataflow to deliver date dimension data sourced f
 
 ## <a name="develop-a-dataflow"></a>データフローを開発する
 
-In this exercise, you will develop a dataflow to support Power BI model development. It will provide a consistent representation of the data warehouse date dimension table.
+この演習では、Power BI モデルの開発をサポートするデータフローを開発します。 データ ウェアハウスの日付ディメンション テーブルの一貫した表現が提供されます。
 
 ### <a name="review-the-data-model"></a>データ モデルを確認する
 
@@ -221,7 +223,7 @@ In this exercise, you will develop a dataflow to support Power BI model developm
      - Azure Portal からサーバー名を入力します ![](../images/synapse-sql-pool-connection-string.png)
      
         サーバー名は次のようになっている必要があります: synapsewsxxxxx.sql.azuresynapse.net
-     - Ensure the Authentication kind is <bpt id="p1">**</bpt>Organizational account<ept id="p1">**</ept>. If you are prompted to sign in, use the lab provided credentials.
+     - 認証の種類が **[組織アカウント]** であることを確認します。 サインインを求められたら、ラボで指定された資格情報を使います。
      ![](../images/synapse-sql-pool-sign-in.png)
 
 1. 右下にある **[次へ]** を選びます。

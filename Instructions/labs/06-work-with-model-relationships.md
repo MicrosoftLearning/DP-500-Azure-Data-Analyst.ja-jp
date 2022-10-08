@@ -10,7 +10,7 @@ lab:
 
 **このラボの推定所要時間: 45 分**
 
-In this lab, you will work with model relationships specifically to address the need for role-playing dimensions. It will involve working with active and inactive relationships, and also Data Analysis Expressions (DAX) functions that modify relationship behavior.
+このラボでは、特に多様ディメンションの必要性に対処するために、モデル リレーションシップを使用します。 アクティブなリレーションシップと非アクティブなリレーションシップの操作、およびリレーションシップの動作を変更するデータ分析式 (DAX) 関数も含まれます。
 
 このラボでは、次の作業を行う方法について説明します。
 
@@ -22,7 +22,7 @@ In this lab, you will work with model relationships specifically to address the 
 
 ## <a name="explore-model-relationships"></a>モデル リレーションシップを探索する
 
-In this exercise, you will open a pre-developed Power BI Desktop solution to learn about the data model. You will then explore the behavior of active model relationships.
+この演習では、事前に開発された Power BI Desktop ソリューションを開き、データ モデルについて学習します。 その後、アクティブなモデル リレーションシップの動作を調べていきます。
 
 ## <a name="get-started"></a>はじめに
 ### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
@@ -51,7 +51,7 @@ In this exercise, you will open a pre-developed Power BI Desktop solution to lea
 
 ### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
 
-このタスクでは、事前に作成された Power BI Desktop ソリューションを開きます。
+このタスクでは、事前に開発された Power BI Desktop ソリューションを開きます。
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
 

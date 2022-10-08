@@ -44,7 +44,7 @@ lab:
 
 ## <a name="use-best-practice-analyzer"></a>ベスト プラクティス アナライザーを使用する
 
-In this exercise, you will install Tabular Editor 2 and load Best Practice Analyzer (BPA) rules. You will review the BPA rules, and then address specific issues found in the data model.
+この演習では、Tabular Editor 2 をインストールし、ベスト プラクティス アナライザー (BPA) ルールを読み込みます。 BPA ルールを確認し、データ モデルに見つかった特定の問題に対処します。
 
 "BPA は無料のサードパーティ製ツールです。モデリングの誤りや、モデルの設計とパフォーマンスを向上させるために行うことができる変更を通知します。これには、パフォーマンスを向上させるために適用できる名前付け、ユーザー エクスペリエンス、一般的な最適化に関する推奨事項が含まれます。詳細については、「[モデルのパフォーマンス向上のためのベスト プラクティス ルール](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)」を参照してください。"**
 
@@ -63,7 +63,7 @@ In this exercise, you will install Tabular Editor 2 and load Best Practice Analy
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. Scroll down to the <bpt id="p1">**</bpt>Assets<ept id="p1">**</ept> section and select the <bpt id="p2">**</bpt>TabularEditor.Installer.msi<ept id="p2">**</ept> file. This will initiate the file install.
+1. **アセット**のセクションまで下にスクロールし、**TabularEditor.Installer.msi** ファイルを選択します。 これにより、ファイルのインストールが開始されます。
 
 1. 完了したら、 **[ファイルを開く]** を選択してインストーラーを実行します。
 
@@ -308,8 +308,8 @@ DAX Studio をダウンロードしてインストールし、DAX クエリを�
 
     ```https://daxstudio.org/downloads/```
     
-1. Select <bpt id="p1">**</bpt>DAX Studio v.2.x.x (installer)<ept id="p1">**</ept> - this will initiate the file install.
-    <bpt id="p1">*</bpt>note: The version of DAX studio will change slightly over time. Download the latest release.<ept id="p1">*</ept>
+1. **DAX Studio v.2.x.x (intaller)** を選択します。これにより、ファイルのインストールが開始されます。
+                    "注: DAX Studio のバージョンは、時間の経過に伴って多少変わります。最新のリリースをダウンロードしてください。"**
 
 1. 完了したら、 **[ファイルを開く]** を選択してインストーラーを実行します。
 
@@ -333,8 +333,8 @@ DAX Studio をダウンロードしてインストールし、DAX クエリを�
     ![グラフィカル ユーザー インターフェイス、アプリケーション 自動的に生成された説明](../images/dp500-use-tools-to-optimize-power-bi-performance-image31e.png)
 1. **[インストール]** を選択します。
 
-1. Upon completion, with <bpt id="p1">**</bpt>Launch DAX Studio<ept id="p1">**</ept> selected, select <bpt id="p2">**</bpt>Finish<ept id="p2">**</ept>. This will open DAX Studio.
-    <ph id="ph1">![</ph>Graphical user interface, application Description automatically generated<ph id="ph2">](../images/dp500-use-tools-to-optimize-power-bi-performance-image31f.png)</ph>
+1. 完了したら、 **[Launch DAX Studio] (DAX Studio を起動する)** が選択された状態で **[完了]** を選択します。 これで DAX Studio が開きます。
+    ![グラフィカル ユーザー インターフェイス、アプリケーション 自動的に生成された説明](../images/dp500-use-tools-to-optimize-power-bi-performance-image31f.png)
 
 1. **[Connect] (接続)** ウィンドウで、 **[PBI / SSDT Model] (PBI / SSDT モデル)** オプションを選択します。
 

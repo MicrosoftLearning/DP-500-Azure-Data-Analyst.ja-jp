@@ -61,7 +61,7 @@ lab:
 
 1. 潜在的なセキュリティ リスクの承認を求めるメッセージが表示されたら、 **[OK]** を選択します。
 
-1. Enter the SQLServerInstance, SqlServerDatabase, and Culture as provided below. Select <bpt id="p1">**</bpt>Load<ept id="p1">**</ept>.
+1. SQLServerInstance、SqlServerDatabase、Culture を次に示すように入力します。 **[読み込み]** を選択します。
 
     SqlServerInstance = ```localhost```
 
@@ -77,9 +77,9 @@ lab:
 
 1. [ネイティブ データベース クエリ] ウィンドウで、 **[実行]** を選択します。
 
-1. Save the file. On the <bpt id="p1">**</bpt>File<ept id="p1">**</ept> ribbon tab, select <bpt id="p2">**</bpt>Save as<ept id="p2">**</ept>.
+1. ファイルを保存します。 **[ファイル]** リボン タブで、 **[名前を付けて保存]** を選択します。
 
-1. In the <bpt id="p1">**</bpt>Save As<ept id="p1">**</ept> window, go to the <bpt id="p2">**</bpt>D:\DP500\Allfiles\08\MySolution<ept id="p2">**</ept> folder. The file name is Sales Analysis - Create a composite model.pbix.
+1. **[名前を付けて保存]** ウィンドウで、**D:\DP500\Allfiles\08\MySolution** フォルダーに移動します。 ファイル名は、Sales Analysis - Create a composite model.pbix です。
 
 1. **[保存]** を選択します。
 

@@ -60,7 +60,7 @@ Tabular Editor 2 のインストール、Power BI Desktop の設定、データ 
 
     ```https://github.com/TabularEditor/TabularEditor/releases```
     
-1. Scroll down to the <bpt id="p1">**</bpt>Assets<ept id="p1">**</ept> section and select the <bpt id="p2">**</bpt>TabularEditor.Installer.msi<ept id="p2">**</ept> file. This will initiate the file install.
+1. **アセット**のセクションまで下にスクロールし、**TabularEditor.Installer.msi** ファイルを選択します。 これにより、ファイルのインストールが開始されます。
 
 1. 完了したら、 **[ファイルを開く]** を選択してインストーラーを実行します。
 
@@ -70,15 +70,15 @@ Tabular Editor 2 のインストール、Power BI Desktop の設定、データ 
 
     ![グラフィカル ユーザー インターフェイス、アプリケーション 自動的に生成された説明](../images/image2.png)
 
-1.  **[使用許諾契約書]** ステップで、同意する場合は **[同意する]** をオンにし、 **[次へ]** を選択します。
+1.  **使用許諾契約書**のステップで、同意する場合は **[I agree] (同意する)** を選択し、 **[次へ]** を選択します。
 
     ![グラフィカル ユーザー インターフェイス、アプリケーション 自動的に生成された説明](../images/image3.png)
 
-1.  **[インストール フォルダーの選択]** ステップで、 **[次へ]** を選択します。
+1.  **インストール フォルダーの選択**のステップで、 **[次へ]** を選択します。
 
     ![中程度の信頼度で自動的に生成された形状の説明](../images/image4.png)
 
-1.  **[アプリケーション ショートカット]** ステップで、 **[次へ]** を選択します。
+1.  **アプリケーション ショートカット**のステップで、 **[次へ]** を選択します。
 
     ![中程度の信頼度で自動的に生成された形状の説明](../images/image4.png)
 
@@ -92,7 +92,7 @@ Tabular Editor 2 のインストール、Power BI Desktop の設定、データ 
 
     ![自動生成された形状の説明を含む図](../images/image5.png)
 
-    "以上で、Tabular Editor がインストールされ、Power BI Desktop 外部ツールとして登録されました。"**
+    "Tabular Editor がインストールされ、Power BI Desktop 外部ツールとして登録されました。"**
 
 ### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
 
@@ -192,11 +192,11 @@ Tabular Editor 2 のインストール、Power BI Desktop の設定、データ 
 
 ## <a name="create-a-calculation-group"></a>計算フィールドを作成する
 
-Now you'll create two calculation groups. The first will support time intelligence. The second will support currency conversion.
+次に、2 つの計算グループを作成します。 1 つ目は、タイム インテリジェンスをサポートします。 2 つ目は、為替換算をサポートします。
 
 ### <a name="create-the-time-intelligence-calculation-group"></a>Time Intelligence 計算グループを作成する
 
-Use Tabular Editor to create the <bpt id="p1">**</bpt>Time Intelligence<ept id="p1">**</ept> calculation group. It will simplify the creation of many time-related calculations, including PY (prior year), YoY (year-over-year), and YoY % (year-over-year percentage). The calculation group will allow analyzing any measure by using different Time Intelligence calculations.
+Tabular Editor を使用して、**Time Intelligence** 計算グループを作成します。 これにより、PY (前年度)、YoY (前年度比)、YoY % (対前年度変化率) など、多くの時間関連の計算を簡単に作成できます。 この計算グループを使用すると、さまざまなタイム インテリジェンス計算を使用してメジャーを分析できます。
 
 "Power BI Desktop では、計算グループの作成または管理はサポートされていません。"**
 
@@ -336,7 +336,7 @@ Use Tabular Editor to create the <bpt id="p1">**</bpt>Time Intelligence<ept id="
 
 ### <a name="create-the-currency-conversion-calculation-group"></a>Currency Conversion 計算グループを作成する
 
-Now you'll create the <bpt id="p1">**</bpt>Currency Conversion<ept id="p1">**</ept> calculation group. It will provide flexibility to convert the <bpt id="p1">**</bpt>Sales<ept id="p1">**</ept> table measures to a selected currency. It will also apply appropriate formatting for the selected currency.
+次に、**Currency Conversion** 計算グループを作成します。 これにより、**Sales** テーブルメジャーを、選択された通貨に変換する柔軟性が提供されます。 また、選択された通貨に適した書式が適用されます。
 
 1.  Power BI Desktop で、**データ** ビューに切り替えます。
 
@@ -383,7 +383,7 @@ Now you'll create the <bpt id="p1">**</bpt>Currency Conversion<ept id="p1">**</e
     ```
     SELECTEDVALUE ( 'Currency'[FormatString] )
     ```
-    This formula returns the format string of the selected currency. This way, formatting is dynamically driven by the data in the <bpt id="p1">**</bpt>Currency<ept id="p1">**</ept> dimension table.
+    この数式は、選択された通貨の書式設定文字列を返します。 このように、書式設定は、**[Currency]** ディメンション テーブル内のデータによって動的に駆動されます。
 
 9.  Power BI Desktop モデルへの変更を保存します。
 

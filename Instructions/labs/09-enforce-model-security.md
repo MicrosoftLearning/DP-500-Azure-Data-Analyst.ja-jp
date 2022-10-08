@@ -10,7 +10,7 @@ lab:
 
 **このラボの推定所要時間: 45 分**
 
-In this lab, you will update a pre-developed data model to enforce security. Specifically, salespeople at the Adventure Works company should only be able to see sales data related to their assigned sales region.
+このラボでは、事前に開発されているデータ モデルを更新してセキュリティを適用します。 具体的には、Adventure Works 社の営業担当者は、割り当てられた営業地域に関連する売上データのみを表示できる必要があります。
 
 このラボでは、次の作業を行う方法について説明します。
 
@@ -45,7 +45,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
     
     `git clone https://github.com/MicrosoftLearning/DP-500-Azure-Data-Analyst DP500`
    
-1. リポジトリをクローンしたら、コマンド プロンプト ウィンドウを閉じます。 
+1. リポジトリが複製されたら、コマンド プロンプト ウィンドウを閉じます。 
    
 1. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
@@ -61,7 +61,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 3. 開発済みの Power BI Desktop ファイルを開くには、**Sales Analysis - Enforce model security.pbix** ファイルをダブルクリックします。
 
-4. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+4. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使ってサインイン プロセスを完了します。
 
     ![](../images/dp500-enforce-model-security-image2.png)
 
@@ -83,13 +83,13 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 2. ラボの資格情報を使ってサインイン プロセスを完了します。
 
-    重要: Power BI Desktop からのサインインに使ったのと同じ資格情報を使う必要があります。**
+    重要: Power BI Desktop からのサインインに使ったのと場合と同じ資格情報を使う必要があります。**
 
 3. 右上にあるプロファイル アイコンを選んでから、 **[無料体験する]** を選びます。
 
     ![](../images/dp500-enforce-model-security-image3.png)
 
-4. メッセージが表示されたら、 **[無料体験する]** を選びます。
+4. メッセージが表示されたら、 **[無料体験する]** を選択します。
 
     ![](../images/dp500-enforce-model-security-image4.png)
 
@@ -251,7 +251,7 @@ In this lab, you will update a pre-developed data model to enforce security. Spe
 
 ### <a name="configure-row-level-security"></a>行レベルのセキュリティを構成する
 
-In this task, you will see how to configure row-level security in the Power BI service. This task relies on the existence of a <bpt id="p1">**</bpt>Salespeaople_Australia<ept id="p1">**</ept> security group in the tenant you are working in. Please read through the tasks, but note that you will not be able to complete them in the absence of the existence of the security group. After reading through, proceed to the Clean Up task.
+このタスクでは、Power BI サービスで行レベル セキュリティを構成する方法について説明します。 このタスクを行うには、作業中のテナントに **Salespeaople_Australia** セキュリティ グループが存在している必要があります。 タスクをお読みください。ただし、セキュリティ グループが存在しない場合はタスクを完了できないことに注意してください。 読んだ後、クリーンアップ タスクに進みます。
 
 1. Power BI サービス (Web ブラウザー) に切り替えます。
 

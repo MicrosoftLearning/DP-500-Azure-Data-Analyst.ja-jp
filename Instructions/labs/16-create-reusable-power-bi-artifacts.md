@@ -10,7 +10,7 @@ lab:
 
 **このラボの推定所要時間: 45 分**
 
-In this lab, you will create a specialized Power BI dataset that extends a core dataset. The specialized dataset will enable the analysis of US sales per capita.
+このラボでは、コア データセットを拡張する特殊な Power BI データセットを作成します。 特殊化されたデータセットにより、1 人当たりの米国の売上の分析が可能になります。
 
 このラボでは、次の作業を行う方法について説明します。
 
@@ -57,13 +57,13 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 2. ラボの資格情報を使ってサインイン プロセスを完了します。
 
-    重要: Power BI Desktop からのサインインに使ったのと同じ資格情報を使う必要があります。**
+    重要: Power BI Desktop からのサインインに使ったのと場合と同じ資格情報を使う必要があります。**
 
 3. 右上にあるプロファイル アイコンを選んでから、 **[無料体験する]** を選びます。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image1.png)
 
-4. メッセージが表示されたら、 **[無料体験する]** を選びます。
+4. メッセージが表示されたら、 **[無料体験する]** を選択します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image2.png)
 
@@ -104,7 +104,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 3. 開発済みの Power BI Desktop ファイルを開くには、**Sales Analysis - Create reusable Power BI artifacts.pbix** ファイルをダブルクリックします。
 
-4. If you're not already signed in, at the top-right corner of Power BI Desktop, select <bpt id="p1">**</bpt>Sign In<ept id="p1">**</ept>. Use the lab credentials to complete the sign in process.
+4. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使ってサインイン プロセスを完了します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image7.png)
 
@@ -150,7 +150,7 @@ In this lab, you will create a specialized Power BI dataset that extends a core 
 
 ## <a name="create-a-specialized-dataset"></a>特殊なデータセットを作成する
 
-In this exercise, you will create a specialized dataset to allow the analysis of US sales per capita. Because the core dataset doesn't contain population values, you will add a new table to extend the model.
+この演習では、1 人当たりの米国の売上を分析できるように、特殊なデータセットを作成します。 コア データセットには母集団の値が含まれていないため、モデルを拡張するための新しいテーブルを追加します。
 
 ### <a name="create-a-live-connection"></a>ライブ接続を作成する
 
@@ -217,7 +217,7 @@ In this exercise, you will create a specialized dataset to allow the analysis of
     ![](../images/dp500-create-reusable-power-bi-artifacts-image25.png)
 
     注: このモデルに変更を加えるオプションが表示されない場合は、プレビュー機能である PBI データセットおよび AS 用の DirectQuery を有効にする必要があります**
-    - Navigate to <bpt id="p1">**</bpt>File<ept id="p1">**</ept><ph id="ph1"> &gt; </ph><bpt id="p2">**</bpt>Options and settings<ept id="p2">**</ept><ph id="ph2"> &gt; </ph><bpt id="p3">**</bpt>Options<ept id="p3">**</ept>, and in the Preview features section, select the DirectQuery for Power BI datasets and Analysis Services checkbox to enable this preview feature. You may need to restart Power BI Desktop for the change to take effect. 
+    - **[ファイル]**  >  **[オプションと設定]**  >  **[オプション]** に移動し、プレビュー機能のセクションで [Power BI データセットおよび Analysis Services 用の DirectQuery] チェックボックスをオンにしてこのプレビュー機能を有効にします。 変更内容を有効にするために、Power BI Desktop の再起動が必要な場合があります。 
 
 2. メッセージが表示されたら、ダイアログ ウィンドウのメッセージを読み、 **[ローカル モデルの追加]** を選択します。
 

@@ -10,7 +10,7 @@ lab:
 
 **ラボの推定所要時間: 30 分**
 
-In this lab, you will configure a report to use automatic page refresh. That way, it will be possible for report consumers to monitor real-time internet sales results.
+このラボでは、ページの自動更新を使用するようにレポートを構成します。 こうすることにより、レポート コンシューマーは、インターネット販売結果をリアルタイムで監視できるようになります。
 
 このラボでは、次の作業を行う方法について説明します。
 
@@ -55,7 +55,7 @@ In this lab, you will configure a report to use automatic page refresh. That way
 
     ![](../images/dp500-monitor-data-in-real-time-image1.png)
 
-2. In the <bpt id="p1">**</bpt>Connect to Server<ept id="p1">**</ept> window, ensure that the <bpt id="p2">**</bpt>Server name<ept id="p2">**</ept> dropdown list is set to <bpt id="p3">**</bpt>localhost<ept id="p3">**</ept>, and that the Authentication dropdown list is set to <bpt id="p4">**</bpt>Windows Authentication<ept id="p4">**</ept>.
+2. **[サーバーに接続]** ウィンドウで、 **[サーバー名]** ドロップダウン リストが **[localhost]** に設定されており、[認証] ドロップダウン リストが **[Windows 認証]** に設定されていることを確認します。
     ![](../images/dp500-monitor-data-in-real-time-image2.png)
 
 3. **[接続]** を選択します。
