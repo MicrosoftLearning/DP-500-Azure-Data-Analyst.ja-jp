@@ -83,7 +83,7 @@ Data Lake Storage にアクセスできる Azure Synapse Analytics ワークス�
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/csv/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/csv/',
             FORMAT = 'CSV',
             PARSER_VERSION='2.0'
         ) AS [result]
@@ -106,7 +106,7 @@ Data Lake Storage にアクセスできる Azure Synapse Analytics ワークス�
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/csv/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/csv/',
             FORMAT = 'CSV',
             PARSER_VERSION='2.0'
         )
@@ -146,7 +146,7 @@ CSV は使いやすい形式ですが、ビッグ データ処理のシナリオ
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/',
             FORMAT = 'PARQUET'
         ) AS [result]
     ```
@@ -159,7 +159,7 @@ CSV は使いやすい形式ですが、ビッグ データ処理のシナリオ
            COUNT(*) AS OrderedItems
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/',
             FORMAT = 'PARQUET'
         ) AS [result]
     GROUP BY YEAR(OrderDate)
@@ -177,7 +177,7 @@ CSV は使いやすい形式ですが、ビッグ データ処理のシナリオ
            COUNT(*) AS OrderedItems
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/year=*/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/parquet/year=*/',
             FORMAT = 'PARQUET'
         ) AS [result]
     WHERE [result].filepath(1) IN ('2019', '2020')
@@ -203,7 +203,7 @@ JSON は、もう 1 つのよく使用されるデータ形式であるため、
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/json/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/json/',
             FORMAT = 'CSV',
             PARSER_VERSION = '2.0'
         ) AS [result]
@@ -221,7 +221,7 @@ JSON は、もう 1 つのよく使用されるデータ形式であるため、
         TOP 100 *
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/json/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/json/',
             FORMAT = 'CSV',
             FIELDTERMINATOR ='0x0b',
             FIELDQUOTE = '0x0b',
@@ -239,7 +239,7 @@ JSON は、もう 1 つのよく使用されるデータ形式であるため、
            Doc
     FROM
         OPENROWSET(
-            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/json/**',
+            BULK 'https://datalakexxxxxxx.dfs.core.windows.net/files/sales/json/',
             FORMAT = 'CSV',
             FIELDTERMINATOR ='0x0b',
             FIELDQUOTE = '0x0b',
