@@ -155,6 +155,7 @@ lab:
 ### <a name="link-your-power-bi-workspace-to-azure-synapse-analytics"></a>Power BI ワークスペースを Azure Synapse Analytics にリンクする
 
 このタスクでは、既存の Power BI ワークスペースを Azure Synapse Analytics ワークスペースにリンクします。
+
 1. Azure portal の専用 SQL プールから、リボンの **[Synapse Studio で開く]** を選択します。
 
 1. Azure Synapse Studio のホーム ページで、 **[視覚化]** を選択して Power BI ワークスペースをリンクします。
