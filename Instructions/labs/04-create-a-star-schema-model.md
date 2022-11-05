@@ -168,7 +168,7 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image3h.png)
 
-1. メッセージが表示されたら、 **[公開]** を選択します。
+1. **[管理]** に移動し、 **[すべて発行]** を選択して、変更が発行されていることを確認します。
 
 ## <a name="develop-a-data-model"></a>データ モデルを開発する
 
