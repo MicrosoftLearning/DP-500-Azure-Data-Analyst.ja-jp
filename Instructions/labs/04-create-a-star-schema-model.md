@@ -190,6 +190,8 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image5.png)
 
+    *注: ここにデータが表示されない場合は、専用の SQL プールが実行されていること、および Power BI ワークスペースが Synapse ワークスペースにリンクされていることを確認します。*
+
 4. **[Power BI データ セット]** ペインで、 **[新しい Power BI データセット]** を選択します。
 
     ![](../images/dp500-create-a-star-schema-model-image6.png)
@@ -234,11 +236,15 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image12.png)
 
-7. (モデル テーブルになる) クエリを作成するには、次の 5 つのテーブルをオンにします。
+7. (モデル テーブルになる) クエリを作成するには、次の 7 つのテーブルをオンにします。
 
     - DimDate
 
     - DimProduct
+  
+    - DimProductCategory
+  
+    - DimProductSubcategory
 
     - DimReseller
 
@@ -332,7 +338,6 @@ lab:
 
     - **FiscalYear** を **Year**
 
-
 23. クエリのデザインを検証するには、ステータス バー (ウィンドウの下部にあります) で、クエリに 5 つの列があることを確認します。
 
     ![](../images/dp500-create-a-star-schema-model-image26.png)
@@ -354,7 +359,40 @@ lab:
     ![](../images/dp500-create-a-star-schema-model-image28.png)
 
 
-27. **DimProduct** クエリを選択します。
+27. **DimProductCategory** テーブルを選択します。 
+    
+28. クエリの名前を「**Product Details**」に変更します。
+
+29. リボンの [ホーム] タブの [結合] グループで、 **[クエリのマージ]** を選択します。 
+
+    *注: 製品の詳細、カテゴリ、サブカテゴリを取得するためにクエリをマージしています。これは Product ディメンションで使用されます。*
+
+1. **[DimProductSubcategory]** テーブルを選択し、各テーブルの **[ProductCategoryKey]** 列を選択します。 **[OK]** を選択します。
+
+    ![](../images/dp500-create-a-star-schema-model-image28a.png)
+
+    
+    *注: このマージには、既定の結合の左外部結合を使用します。*
+
+2. **[DimProductSubcategory]** 列を展開します。 **[ProductSubcategoryKey]** と **[EnglishProductSubcategoryName]** 列を選択します。 **[元の列名をプレフィックスとして使用します]** をオフにします。
+
+    ![](../images/dp500-create-a-star-schema-model-image28b.png)
+
+    *この展開機能を使用すると、テーブルをソース データの外部キー制約に基づいて結合できます。このラボで使用している設計アプローチでは、snowflake ディメンション テーブルを結合してデータの非正規化表現を生成します。*
+
+1. **[OK]** を選択します。
+   
+2. 以下を除くすべての列を削除します。
+
+   - ProductSubcategoryKey
+   
+   - EnglishProductCategoryName
+
+   - EnglishProductSubcategoryName
+
+   これで、37 行の列が 3 つ作成されます。
+
+3.  **DimProduct** クエリを選択します。
 
     ![](../images/dp500-create-a-star-schema-model-image29.png)
 
@@ -362,12 +400,25 @@ lab:
 
     ![](../images/dp500-create-a-star-schema-model-image30.png)
 
-29. クエリをフィルター処理するには、**FinishedGoodsFlag** 列のヘッダーでドロップダウン メニューを開き、 **[FALSE]** をオフにします。
+1. リボンの [ホーム] タブの [結合] グループで、 **[クエリのマージ]** を選択します。 
+
+1. **[製品の詳細]** テーブルを選択し、Product テーブルと Product details テーブルの両方で **[ProductSubcategoryKey]** 列を選択します。
+
+    ![](../images/dp500-create-a-star-schema-model-image30a.png)
+
+1. **[OK]** を選択します。
+
+1. [製品の詳細] 列を展開し、 **[EnglishProductSubcategoryName]** と **[EnglishProductCategoryName]** の列を選択します。 
+
+    ![](../images/dp500-create-a-star-schema-model-image30b.png)
+
+1. **[OK]** を選択します。
+
+2.  クエリをフィルター処理するには、**FinishedGoodsFlag** 列のヘッダーでドロップダウン メニューを開き、 **[FALSE]** をオフにします。
 
     ![](../images/dp500-create-a-star-schema-model-image31.png)
 
 30. **[OK]** を選択します。
-
 
 31. 以下を除くすべての列を削除します。
 
@@ -377,26 +428,9 @@ lab:
 
     - Color
 
-    - DimProductSubcategory
-
-32. テーブルを結合するようにクエリを構成するには、**DimProductSubcategory** 列のヘッダーで、 **[展開]** ボタンを選択し、 **[(すべての列の選択)]** をオフにします。
-
-    "この機能を使用すると、ソース データの外部キー制約に基づいてテーブルを結合できます。このラボで使用する設計アプローチでは、snowflake ディメンション テーブルを結合してデータの非正規化表現を生成します。"**
-
-33. **[元の列名をプレフィックスとして使用します]** をオフにします。
-
-    ![](../images/dp500-create-a-star-schema-model-image32.png)
-
-34. 次の 2 つの列をオンにします。
-
     - EnglishProductSubcategoryName
 
-    - DimProductCategory
-
-35. **[OK]** を選択します。
-
-36. 前の手順を繰り返して、**DimProductCategory** を展開し、**EnglishProductCategoryName** 列を導入します。
-
+    - EnglishProductCategoryName
 
 37. 次の列の名前を変更します。
 
@@ -411,8 +445,6 @@ lab:
     ![](../images/dp500-create-a-star-schema-model-image33.png)
 
 39. **[ネイティブ クエリ]** ウィンドウで、SELECT ステートメントでクエリのデザインが反映されていることを確認します。
-
-    "このステートメントには、非正規化されたクエリ結果を生成するための入れ子になったサブディレクトリが含まれます。"**
 
 40. **[ネイティブ クエリ]** ウィンドウを閉じるには、 **[OK]** を選択します。
 
@@ -528,6 +560,11 @@ lab:
 
     "以上で、**Sales** クエリのデザインが完了しました。"**
 
+1. **[製品の詳細]** テーブルを右クリックし、 **[読み込みを有効にする]** をオフにします。 これにより、Product Details テーブルはデータ モデルに読み込まれず、レポートには表示されません。
+
+    ![](../images/dp500-create-a-star-schema-model-image40a.png)
+
+1. この手順を、**DimProductSubcategory** テーブルに対して [読み込みを有効にする] をオフにして繰り返します。
 
 63. クエリを適用するには、 **[ホーム]** リボン タブの **[閉じる]** グループ内から、 **[閉じて適用]** アイコンを選択します。
 
