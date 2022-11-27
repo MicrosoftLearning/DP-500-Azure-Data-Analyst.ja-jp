@@ -149,7 +149,9 @@ lab:
 
     "Tabular Editor が新しいウィンドウで開き、Power BI Desktop でホストされているデータ モデルにライブ接続されます。Tabular Editor でモデルに加えた変更は、保存するまで Power BI Desktop に反映されません。"**
 
-2. BPA ルールを読み込むには、 **[Advanced Scripting] (高度なスクリプト)** タブを選択します。
+2. BPA ルールを読み込むには、 **[C# スクリプト]** タブを選択します。
+
+    *注: これは、以前のバージョンの表形式エディターでは、[高度なスクリプト] タブと呼ばれている場合があります。*
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
@@ -243,7 +245,7 @@ lab:
     "ヒント: すべての数式は、**D:\DP500\Allfiles\13\Assets\Snippets.txt** からコピーして貼り付けることができます。"**
 
     ```
-    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )
+    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )C#
     ```
 
 7. モデルの変更を保存するには、ツール バーの **[Save changes to the connected database] (接続されているデータベースに変更を保存)** コマンドを選択します (または **Ctrl + S** キーを押します)。
@@ -268,9 +270,11 @@ lab:
 
 12. BPA で修正スクリプトをクリップボードにコピーしたという通知が表示されたら、 **[OK]** を選択します。
 
-13. Tabular Editor に切り替え、 **[Advanced Scripting] (高度なスクリプト)** タブを選択します。
+13. Tabular Editor に切り替え、 **[C# スクリプト]** タブを選択します。
 
-    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image26.png)
+    *注: これは、以前のバージョンの表形式エディターでは、[高度なスクリプト] タブと呼ばれている場合があります。*
+    
+    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
 14. 修正スクリプトをコピーするには、ペイン内で右クリックし、**Ctrl + C** キーを押します。
 
@@ -280,7 +284,7 @@ lab:
 
 15. スクリプトを実行するには、ツール バーの **[スクリプトを実行]** コマンドを選択します。
 
-    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image28.png)
+    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image14.png)
 
 16. モデルの変更を保存します。
 
