@@ -47,7 +47,7 @@ lab:
 
 ### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
 
-このタスクでは、事前に作成された Power BI Desktop ソリューションを開きます。
+このタスクでは、事前に開発された Power BI Desktop ソリューションを開きます。
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
 

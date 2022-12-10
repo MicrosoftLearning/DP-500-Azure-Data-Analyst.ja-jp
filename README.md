@@ -1,7 +1,7 @@
-# <a name="dp-500-designing-and-implementing-enterprise-scale-analytics-solutions-using-microsoft-azure"></a>DP-500: Microsoft Azure と Microsoft Power BI を使用した Enterprise-Scale Analytics ソリューションの設計および実装
+# <a name="dp-500-designing-and-implementing-enterprise-scale-analytics-solutions-using-microsoft-azure"></a>DP-500: Microsoft Azure を使用した Enterprise-Scale Analytics ソリューションの設計および実装
 
 - **あなたは MCT ですか?** - [MCT 向けの GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide/)をご覧ください
-- 学生を [コンテンツ ディレクトリ](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/) に移動して、ILT モジュールとそれに関連するラボの一覧を表示します。
+- ILT モジュールとその関連ラボの一覧については、学生を[コンテンツ ディレクトリ](https://microsoftlearning.github.io/DP-500-Azure-Data-Analyst/)に誘導します。
 
 ## <a name="what-are-we-doing"></a>説明
 
@@ -21,7 +21,7 @@
 
 - すべての MCT は、GitHub repro のコードまたはコンテンツに pull request を送信できます。Microsoft とコース作成者は、必要に応じてコンテンツとラボ コードの変更をトリアージして追加します。
 
-- バグ、変更、改善、アイデアを送信できます。  新しい Azure 機能を先に見つけたら、  新しいデモを提出しましょう。
+- バグ、変更、改善、アイデアを送信できます。  新しい Azure 機能を先に見つけたら、  新しいデモを送信してください!
 
 ## <a name="notes"></a>Notes
 
