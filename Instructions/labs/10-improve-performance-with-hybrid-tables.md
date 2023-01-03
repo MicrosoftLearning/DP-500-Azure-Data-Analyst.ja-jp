@@ -117,7 +117,31 @@ lab:
 
 8. Azure portal Web ブラウザー セッションを開いたままにしておきます。 **「Power BI Desktop を設定する」タスク**でデータベース接続文字列をコピーする必要があります。
 
-### <a name="set-up-the-power-bi-service"></a>Power BI サービスを設定する
+### <a name="set-up-power-bi"></a>Power BI を設定する
+
+#### <a name="set-up-a-power-bi-account-in-power-bi-desktop"></a>Power BI Desktop で Power BI アカウントを設定する
+
+このタスクでは、Power BI Desktop を設定します。
+
+1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
+
+    ![](../images/dp500-create-a-dataflow-image1.png)
+
+1. **D:\DP500\Allfiles\10\Starter** フォルダーに移動します。
+
+1. 事前に作成された Power BI Desktop ファイルを開くには、**Sales Analysis - Improve performance with hybrid tables** ファイルをダブルクリックします。
+
+1. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使用してサインイン プロセスを完了します。
+
+    ![](../images/dp500-create-a-dataflow-image2.png)
+
+    "注: サインアップ プロセスを完了するために、おそらく Power BI サービスが表示されます。"**
+
+1. ファイルを保存するには、 **[ファイル]** リボンの **[名前を付けて保存]** を選びます。
+
+1. **[名前を付けて保存]** ウィンドウで、**D:\DP500\Allfiles\10\MySolution** フォルダーに移動します。
+
+#### <a name="set-up-power-bi-premium-trial"></a>Power BI Premium 試用版を設定する
 
 このタスクでは、Power BI サービスにサインインして、試用版ライセンスを開始します。
 
