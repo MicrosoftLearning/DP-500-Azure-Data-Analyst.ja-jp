@@ -82,7 +82,8 @@ lab:
 
     このスクリプトの実行には、約 10 から 15 分かかります。
 
-    "注: このラボでは、Azure SQL データベースを作成するためのリソース グループが必要です。ホストされているラボ環境にリソース グループが用意されていない場合は、Azure サブスクリプションに[リソース グループを作成](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)します。"**
+    *注: このラボでは、Azure SQL データベースを作成するためにリソース グループが必要です。ホストされたラボ環境でこのラボを実行している場合は、[Azure Portal](portal.azure.com) にログインしてリソース グループ名を取得する必要があることがあります。ホストされたラボ環境にリソース グループを用意していない場合は、Azure サブスクリプションに[リソース グループを作成](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups)してください。*
+
 3. スクリプトが完了したら、PowerShell ウィンドウを閉じます。
 
 ### <a name="set-up-the-azure-sql-database"></a>Azure SQL Database を設定する
