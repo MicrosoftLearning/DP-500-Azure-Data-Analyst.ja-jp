@@ -276,7 +276,7 @@ lab:
     
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image13.png)
 
-14. 修正スクリプトをコピーするには、ペイン内で右クリックし、**Ctrl + C** キーを押します。
+14. 修正スクリプトを貼り付けるには、ペイン内で右クリックし、**Ctrl + V** キーを押します。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image27.png)
 
