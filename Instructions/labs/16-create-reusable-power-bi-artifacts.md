@@ -47,31 +47,40 @@ lab:
    
 1. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
-### <a name="sign-in-to-the-power-bi-service"></a>Power BI サービスにサインインする
+### <a name="set-up-power-bi"></a>Power BI を設定する
 
-このタスクでは、Power BI サービスにサインインし、試用版ライセンスを開始して、ワークスペースを作成します。
+このタスクでは、Power BI を設定します。
 
-重要: VM 環境に Power BI を既にセットアップしてある場合は、次のタスクに進みます。**
+1. Power BI Desktop を開くには、タスク バーにある **Power BI Desktop** のショートカットを選択します。
 
-1. Web ブラウザーで、[https://powerbi.com](https://powerbi.com/) にアクセスします。
+    ![](../images/dp500-create-a-star-schema-model-image1.png)
 
-2. ラボの資格情報を使ってサインイン プロセスを完了します。
+2. [作業の開始] ウィンドウの右側にある **[X]** を選択します。
 
-    重要: Power BI Desktop からのサインインに使ったのと場合と同じ資格情報を使う必要があります。**
+    ![](../images/dp500-create-a-star-schema-model-image2.png)
 
-3. 右上にあるプロファイル アイコンを選んでから、 **[無料体験する]** を選びます。
+3. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選択します。 ラボの資格情報を使用してサインイン プロセスを完了します。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image1.png)
+    ![](../images/dp500-create-a-star-schema-model-image3.png)
+4. Microsoft Edge の Power BI サインアップ ページにリダイレクトされます。 **[続行]** を選択してサインアップを完了します。
 
-4. メッセージが表示されたら、 **[無料体験する]** を選択します。
+    ![](../images/dp500-create-a-star-schema-model-image3b.png)
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image2.png)
+5. 10 桁の電話番号を入力し、 **[開始]** を選択します。 **[開始]** をもう一度選択します。 Power BI にリダイレクトされます。
 
-5. 残りのタスクをすべて行って、試用版のセットアップを完了します。
+1. 右上にあるプロファイル アイコンを選択し、 **[無料体験する]** を選択します。
+
+    ![](../images/dp500-create-a-dataflow-image3.png)
+
+1. メッセージが表示されたら、 **[無料体験する]** を選択します。
+
+    ![](../images/dp500-create-a-dataflow-image4.png)
+
+1. 残りのタスクをすべて行って、試用版のセットアップを完了します。
 
     "ヒント: Power BI の Web ブラウザー エクスペリエンスは、**Power BI サービス**と呼ばれます。"**
 
-### <a name="create-a-workspace"></a>ワークスペースの作成
+### <a name="create-a-workspace-in-the-power-bi-service"></a>Power BI サービスでワークスペースを作成する
 
 このタスクでは、ワークスペースを作成します。
 
@@ -92,9 +101,7 @@ lab:
 
     作成されると、ワークスペースが開きます。次のタスクでは、データセットをこのワークスペースに発行します。**
 
-### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
-
-このタスクでは、Power BI Desktop を設定します。
+### <a name="open-the-starter-file-in-power-bi-desktop"></a>Power BI Desktop でスターター ファイルを開く
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
 
