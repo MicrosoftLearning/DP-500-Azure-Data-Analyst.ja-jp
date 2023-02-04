@@ -199,7 +199,7 @@ lab:
 
 このタスクでは、日付関連データの一貫した定義を表すデータフローを作成します。
 
-1. Power BI サービスの**ナビゲーション** ウィンドウの左下にある **[データを取得]** を選びます。
+1. Power BI サービスで、 **[新規]** 、 **[データフロー]** の順に選びます。
 
     ![](../images/dp500-create-a-dataflow-image10.png)
 
@@ -220,9 +220,15 @@ lab:
     ヒント: 検索ボックス (右上) を使って、データ ソースを見つけることができます。**
 
 1. Synapse 接続の設定を入力します。
-     - Azure Portal からサーバー名を入力します ![](../images/synapse-sql-pool-connection-string.png)
+
+     - Azure Portal からサーバー名を入力します 
      
-        サーバー名は次のようになっている必要があります: synapsewsxxxxx.sql.azuresynapse.net
+     ![](../images/synapse-sql-pool-connection-string.png)
+     
+      サーバー名は次のようになっているはずです。
+      
+      synapsewsxxxxx.sql.azuresynapse.net
+      
      - 認証の種類が **[組織アカウント]** であることを確認します。 サインインを求められたら、ラボで指定された資格情報を使います。
      ![](../images/synapse-sql-pool-sign-in.png)
 
