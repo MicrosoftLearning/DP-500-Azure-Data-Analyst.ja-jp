@@ -221,7 +221,12 @@ lab:
 1. Synapse 接続の設定を入力します。
      - Azure Portal からサーバー名を取得します ![](../images/synapse-sql-pool-connection-string.png)
      
-        サーバー名は次のようになっている必要があります: synapsewsxxxxx.sql.azuresynapse.net
+     ![](../images/synapse-sql-pool-connection-string.png)
+     
+      サーバー名は次のようになっているはずです。
+      
+      synapsewsxxxxx.sql.azuresynapse.net
+      
      - 認証の種類が **[組織アカウント]** であることを確認します。 サインインを求められたら、ラボで指定された資格情報を使います。
      ![](../images/synapse-sql-pool-sign-in.png)
 
