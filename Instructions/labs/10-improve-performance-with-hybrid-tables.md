@@ -4,9 +4,9 @@ lab:
   module: Optimize enterprise-scale tabular models
 ---
 
-# <a name="improve-performance-with-hybrid-tables"></a>ハイブリッド テーブルを使用してパフォーマンスを向上させる
+# ハイブリッド テーブルを使用してパフォーマンスを向上させる
 
-## <a name="overview"></a>概要
+## 概要
 
 **このラボの推定所要時間: 45 分**
 
@@ -18,11 +18,11 @@ lab:
 
 - テーブル パーティションを確認する。
 
-## <a name="get-started"></a>はじめに
+## はじめに
 
 この演習では、環境を準備します。
 
-### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
+### このコースのリポジトリを複製する
 
 1. スタート メニューで、コマンド プロンプトを開きます。
 
@@ -43,13 +43,11 @@ lab:
    
 1. リポジトリが複製されたら、エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。 **コマンド プロンプト ウィンドウを閉じます**。
 
-### <a name="deploy-an-azure-sql-database"></a>Azure SQL Database をデプロイする 
+### Azure SQL Database をデプロイする 
 
 このタスクでは、Power BI のデータ ソースとして使用する Azure SQL データベースを作成します。 セットアップ スクリプトを実行すると、Azure SQL データベース サーバーが作成され、AdventureWorksDW2022 データベースが読み込まれます。
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
-
-    ![](../images/dp500-improve-performance-with-hybrid-tables-image13.png)
 
 2. **D:\DP500\Allfiles\10** フォルダーに移動します。
 
@@ -60,8 +58,6 @@ lab:
 5. タスク バーの検索ボックスに、「`PowerShell`」と入力します。  
    
    検索結果が表示されたら、 **[管理者として実行]** を選択します
-    
-    ![](../images/run-powershell-admin.png)
     
     "メッセージが表示されたら、[はい] を選択して、このアプリによるデバイスの変更を許可します。"**
 1. PowerShell で、次の 2 行のテキストを入力してスクリプトを実行します。 
@@ -86,7 +82,7 @@ lab:
 
 3. スクリプトが完了したら、PowerShell ウィンドウを閉じます。
 
-### <a name="set-up-the-azure-sql-database"></a>Azure SQL Database を設定する
+### Azure SQL Database を設定する
 
 このタスクでは、Azure SQL Database を、仮想マシン (VM) の IP アドレスからの接続を許可するように設定します。 ユーザー名、パスワード、リソース グループを入力した後、このスクリプトの実行には約 10 分かかります。
 
@@ -118,9 +114,9 @@ lab:
 
 8. Azure portal Web ブラウザー セッションを開いたままにしておきます。 **「Power BI Desktop を設定する」タスク**でデータベース接続文字列をコピーする必要があります。
 
-### <a name="set-up-power-bi"></a>Power BI を設定する
+### Power BI を設定する
 
-#### <a name="set-up-a-power-bi-account-in-power-bi-desktop"></a>Power BI Desktop で Power BI アカウントを設定する
+#### Power BI Desktop で Power BI アカウントを設定する
 
 このタスクでは、Power BI Desktop を設定します。
 
@@ -142,7 +138,7 @@ lab:
 
 1. **[名前を付けて保存]** ウィンドウで、**D:\DP500\Allfiles\10\MySolution** フォルダーに移動します。
 
-#### <a name="set-up-power-bi-premium-trial"></a>Power BI Premium 試用版を設定する
+#### Power BI Premium 試用版を設定する
 
 このタスクでは、Power BI サービスにサインインして、試用版ライセンスを開始します。
 
@@ -166,7 +162,7 @@ lab:
 
     "ヒント: Power BI の Web ブラウザー エクスペリエンスは、**Power BI サービス**と呼ばれます。"**
 
-### <a name="create-a-workspace"></a>ワークスペースの作成
+### ワークスペースの作成
 
 このタスクでは、ワークスペースを作成します。
 
@@ -196,7 +192,7 @@ lab:
 
     "作成されると、Power BI サービスによってワークスペースが開かれます。このワークスペースには、このラボで後ほど戻ります。"**
 
-### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
+### Power BI Desktop を設定する
 
 このタスクでは、事前に開発された Power BI Desktop ソリューションを開き、データ ソースの設定とアクセス許可を設定し、データ モデルを更新します。
 
@@ -259,13 +255,13 @@ lab:
 
 17. **[保存]** を選択します。
 
-18. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使用してサインイン プロセスを完了します。
+18. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選びます。 ラボの資格情報を使ってサインイン プロセスを完了します。
 
     "重要: Power BI サービスへのサインインに使用したものと同じ資格情報を使用する必要があります。"**
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image22.png)
 
-### <a name="review-the-report"></a>レポートを確認する
+### レポートを確認する
 
 このタスクでは、事前に作成されたレポートを確認します。
 
@@ -275,7 +271,7 @@ lab:
 
     "このレポート ページには、タイトルと 2 つのビジュアルがあります。スライサー ビジュアルを使用すると、単一の会計年度でフィルター処理を行うことができ、縦棒グラフ ビジュアルでは、月別の売上高が表示されます。このラボでは、増分更新とハイブリッド テーブルを設定することでレポートのパフォーマンスを向上させます。"**
 
-### <a name="review-the-data-model"></a>データ モデルを確認する
+### データ モデルを確認する
 
 このタスクでは、事前に作成されたデータ モデルを確認します。
 
@@ -291,13 +287,13 @@ lab:
 
     "このラボでは、増分更新を使用してハイブリッド テーブルになるように **Sales** テーブルを設定します。ハイブリッド テーブルには、最新の期間を表す DirectQuery パーティションが含まれます。このパーティションにより、データ ソースからの現在のデータを Power BI レポートで確実に使用できるようになります。"**
 
-## <a name="set-up-incremental-refresh"></a>増分更新を設定する
+## 増分更新を設定する
 
 この演習では、増分更新を設定します。
 
 "増分更新では、新しいデータや更新されたデータを頻繁に読み込むデータセット テーブルのパーティションの作成と管理を自動化することで、スケジュールされた更新操作が拡張されます。これは、更新時間を短縮し、ソース データと Power BI への負担を軽減するのに役立ちます。また、現在のデータを Power BI レポートにより迅速に表示するためにも役立ちます。"**
 
-### <a name="add-parameters"></a>パラメーターを追加する
+### パラメーターを追加する
 
 このタスクでは、2 つのパラメーターを追加します。
 
@@ -353,7 +349,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-### <a name="filter-the-query"></a> クエリのフィルター処理
+###  クエリのフィルター処理
 
 このタスクでは、**Sales** クエリにフィルターを追加します。
 
@@ -397,7 +393,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image40.png)
 
-### <a name="set-up-incremental-refresh"></a>増分更新を設定する
+### 増分更新を設定する
 
 このタスクでは、**Sales** テーブルの増分更新ポリシーを設定します。
 
@@ -435,7 +431,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image47.png)
 
-### <a name="publish-the-dataset"></a>データセットを発行する
+### データセットを発行する
 
 このタスクでは、データセットを発行します。
 
@@ -457,7 +453,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image51.png)
 
-### <a name="set-up-the-dataset"></a>データセットを設定する
+### データセットを設定する
 
 このタスクでは、データ ソースの資格情報を設定し、データセットを更新します。
 
@@ -525,7 +521,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image62.png)
 
-### <a name="review-the-table-partitions"></a>テーブル パーティションを確認する
+### テーブル パーティションを確認する
 
 このタスクでは、SSMS を使用してテーブル パーティションを確認します。
 
@@ -567,11 +563,11 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image68.png)
 
-## <a name="test-the-hybrid-table"></a>ハイブリッド テーブルをテストする
+## ハイブリッド テーブルをテストする
 
 この演習では、レポートを開き、販売注文を追加し、レポート データの更新を確認します。
 
-### <a name="open-the-report"></a>レポートを開く
+### レポートを開く
 
 このタスクでは、レポートを開きます。
 
@@ -587,7 +583,7 @@ lab:
 
     "2022 年 8 月以降は、スライサーの既定値である 2022 年度には含まれていないことに注意してください。"**
 
-### <a name="add-an-order-to-the-database"></a>注文をデータベースに追加する
+### 注文をデータベースに追加する
 
 このタスクでは、注文をデータベースに追加します。
 
@@ -621,7 +617,7 @@ lab:
 
 11. ファイルを閉じるには、 **[ファイル]** メニューで **[閉じる]** を選択します。
 
-### <a name="refresh-the-report"></a>レポートを更新する
+### レポートを更新する
 
 このタスクでは、レポートを更新します。
 
@@ -639,7 +635,7 @@ lab:
 
     "ヒント: ハイブリッド テーブルは、ページの自動更新 (Power BI レポートを自動的に更新する機能) を使用する場合に特に適しています。"**
 
-### <a name="finish-up"></a>仕上げ
+### 仕上げ
 
 このタスクでは、完了作業を行います。 SSMS を開き、データベース AdventureWorksDW2022-DP500 に接続していることを確認します。
 
