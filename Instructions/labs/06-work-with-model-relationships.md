@@ -4,9 +4,9 @@ lab:
   module: Design and build tabular models
 ---
 
-# <a name="work-with-model-relationships"></a>モデル リレーションシップを操作する
+# モデル リレーションシップを操作する
 
-## <a name="overview"></a>概要
+## 概要
 
 **このラボの推定所要時間: 45 分**
 
@@ -20,12 +20,12 @@ lab:
 
 - リレーションシップの動作を変更する DAX 関数を使用します。
 
-## <a name="explore-model-relationships"></a>モデル リレーションシップを探索する
+## モデル リレーションシップを探索する
 
 この演習では、事前に開発された Power BI Desktop ソリューションを開き、データ モデルについて学習します。 その後、アクティブなモデル リレーションシップの動作を調べていきます。
 
-## <a name="get-started"></a>はじめに
-### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
+## はじめに
+### このコースのリポジトリを複製する
 
 1. スタート メニューで、コマンド プロンプトを開きます
    
@@ -49,13 +49,11 @@ lab:
    
 1. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
-### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
+### Power BI Desktop を設定する
 
 このタスクでは、事前に開発された Power BI Desktop ソリューションを開きます。
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
-
-    ![](../images/dp500-work-with-model-relationships-image1.png)
 
 2. エクスプローラーで、**D:\DP500\Allfiles\06\Starter** フォルダーに移動します。
 
@@ -67,7 +65,7 @@ lab:
 
 6. **[保存]** を選択します。
 
-### <a name="review-the-data-model"></a>データ モデルを確認する
+### データ モデルを確認する
 
 このタスクでは、データ モデルを確認します。
 
@@ -97,7 +95,7 @@ lab:
 
     このラボでは、多様ディメンションをサポートするモデルを設計する方法について説明します。**
 
-### <a name="visualize-date-data"></a>日付データを視覚化する
+### 日付データを視覚化する
 
 このタスクでは、日付別に販売データを視覚化し、リレーションシップのアクティブな状態を切り替えます。
 
@@ -109,7 +107,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image6.png)
 
-3. テーブル ビジュアルに列を追加するには、 **[フィールド]** ペイン (右側にあります) で、まず **Date** テーブルを展開します。
+3. テーブル ビジュアルに列を追加するには、 **[データ]** ペイン (右側にあります) で、まず **Date** テーブルを展開します。
 
     ![](../images/dp500-work-with-model-relationships-image7.png)
 
@@ -143,7 +141,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image13.png)
 
-### <a name="modify-relationship-active-status"></a>リレーションシップのアクティブな状態を変更する
+### リレーションシップのアクティブな状態を変更する
 
 このタスクでは、2 つのリレーションシップのアクティブな状態を変更します。
 
@@ -191,15 +189,15 @@ lab:
 
     次の演習では、DAX 数式でリレーションシップをアクティブにする方法を学習します。**
 
-## <a name="use-inactive-relationships"></a>非アクティブなリレーションシップを使用する
+## 非アクティブなリレーションシップを使用する
 
 この演習では、DAX 数式でリレーションシップをアクティブにする方法を学習します。
 
-### <a name="use-inactive-relationships"></a>非アクティブなリレーションシップを使用する
+### 非アクティブなリレーションシップを使用する
 
 このタスクでは、USERELATIONSHIP 関数を使用して非アクティブなリレーションシップをアクティブにします。
 
-1. **[フィールド]** ペインで、 **[Sales]** テーブルを右クリックし、 **[新しいメジャー]** を選択します。
+1. **[データ]** ペインで、**Sales** テーブルを右クリックし、 **[新しいメジャー]** を選択します。
 
     ![](../images/dp500-work-with-model-relationships-image21.png)
 
@@ -236,11 +234,11 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image25.png)
 
-## <a name="add-another-date-table"></a>別の日付テーブルを追加する
+## 別の日付テーブルを追加する
 
 この演習では、出荷日の分析をサポートする日付テーブルを追加します。
 
-### <a name="remove-the-inactive-relationships"></a>非アクティブなリレーションシップを削除する
+### 非アクティブなリレーションシップを削除する
 
 このタスクでは、**ShipDateKey** 列への既存のリレーションシップを削除します。
 
@@ -258,7 +256,7 @@ lab:
 
     リレーションシップを削除すると、**Sales Shipped** メジャーにエラーが発生します。このラボでは、後ほどメジャーの数式を書き換えます。**
 
-### <a name="disable-relationship-options"></a>リレーションシップ オプションを無効にする
+### リレーションシップ オプションを無効にする
 
 このタスクでは、2 つのリレーションシップ オプションを無効にします。
 
@@ -280,7 +278,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image32.png)
 
-### <a name="add-another-date-table"></a>別の日付テーブルを追加する
+### 別の日付テーブルを追加する
 
 このタスクでは、別の日付テーブルをモデルに追加するクエリを作成します。
 
@@ -326,7 +324,7 @@ lab:
 
 9. **Ship Date** と **Sales** のテーブルの間にアクティブなリレーションシップが存在するようになったことに注目してください。
 
-### <a name="visualize-ship-date-data"></a>出荷日データを視覚化する
+### 出荷日データを視覚化する
 
 このタスクでは、新しいテーブル ビジュアル内の出荷日データを視覚化します。
 
@@ -352,7 +350,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image42.png)
 
-7. **[フィールド]** ペインで、**Ship Date** テーブルを展開して開きます。
+7. **[データ]** ペインで、**Ship Date** テーブルを展開して開きます。
 
 8. 新しいテーブル ビジュアルに新しいフィールドを追加するには、**Ship Date** テーブルから **Ship Year** フィールドを **[値]** ウェルの **Sales Amount** フィールドの上にドラッグします。
 
@@ -368,15 +366,15 @@ lab:
 
     最後に、1 つのビジュアルでフィルターの組み合わせを実現することはできません。たとえば、メジャーを作成せずに、同じビジュアルで受注済みの販売と出荷済みの販売を組み合わせることはできません。次の演習では、そのメジャーを作成します。**
 
-## <a name="explore-other-relationship-functions"></a>他のリレーションシップ関数を探索する
+## 他のリレーションシップ関数を探索する
 
 この演習では、他の DAX リレーションシップ関数を操作します。
 
-### <a name="explore-other-relationship-functions"></a>他のリレーションシップ関数を探索する
+### 他のリレーションシップ関数を探索する
 
 このタスクでは、CROSSFILTER および TREATAS 関数を使用して、計算中のリレーションシップの動作を変更します。
 
-1. **[フィールド]** ペインの **Sales** テーブル内から、**Sales Shipped** メジャーを選択します。
+1. **[データ]** ペインの **Sales** テーブル内から、**Sales Shipped** メジャーを選択します。
 
     ![](../images/dp500-work-with-model-relationships-image45.png)
 
@@ -408,7 +406,7 @@ lab:
 
     **OrderDateKey** 列に空白がないため、空白のグループは生成されませんでした。未出荷の販売を表示するには、別のアプローチが必要です。**
 
-### <a name="show-unshipped-sales"></a>未出荷の販売を表示する
+### 未出荷の販売を表示する
 
 このタスクでは、未出荷の販売額を表示するメジャーを作成します。
 
@@ -439,7 +437,7 @@ lab:
 
     ![](../images/dp500-work-with-model-relationships-image50.png)
 
-### <a name="finish-up"></a>仕上げ
+### 仕上げ
 
 このタスクでは、完了作業を行います。
 
