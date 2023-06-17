@@ -4,9 +4,9 @@ lab:
   module: Manage the analytics development lifecycle
 ---
 
-# <a name="create-reusable-power-bi-assets"></a>再利用可能な Power BI アセットを作成する
+# 再利用可能な Power BI アセットを作成する
 
-## <a name="overview"></a>概要
+## 概要
 
 **このラボの推定所要時間: 45 分**
 
@@ -20,11 +20,11 @@ lab:
 
 - 系列ビューを使って、依存する Power BI 資産を検出します。
 
-## <a name="get-started"></a>はじめに
+## はじめに
 
 この演習では、環境を準備します。
 
-### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
+### このコースのリポジトリを複製する
 
 1. スタート メニューで、コマンド プロンプトを開きます
 
@@ -47,17 +47,13 @@ lab:
    
 1. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
-### <a name="set-up-power-bi"></a>Power BI を設定する
+### Power BI を設定する
 
 このタスクでは、Power BI を設定します。
 
 1. Power BI Desktop を開くには、タスク バーにある **Power BI Desktop** のショートカットを選択します。
 
-    ![](../images/dp500-create-a-star-schema-model-image1.png)
-
-2. [作業の開始] ウィンドウの右側にある **[X]** を選択します。
-
-    ![](../images/dp500-create-a-star-schema-model-image2.png)
+2. 作業の開始ウィンドウを閉じます。
 
 3. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選択します。 ラボの資格情報を使用してサインイン プロセスを完了します。
 
@@ -68,19 +64,18 @@ lab:
 
 5. 10 桁の電話番号を入力し、 **[開始]** を選択します。 **[開始]** をもう一度選択します。 Power BI にリダイレクトされます。
 
-1. 右上にあるプロファイル アイコンを選択し、 **[無料体験する]** を選択します。
+6. 右上にあるプロファイル アイコンを選択し、 **[無料体験する]** を選択します。
 
     ![](../images/dp500-create-a-dataflow-image3.png)
 
-1. メッセージが表示されたら、 **[無料体験する]** を選択します。
+7. メッセージが表示されたら、 **[無料体験する]** を選択します。
 
-    ![](../images/dp500-create-a-dataflow-image4.png)
 
-1. 残りのタスクをすべて行って、試用版のセットアップを完了します。
+8. 残りのタスクをすべて行って、試用版のセットアップを完了します。
 
     "ヒント: Power BI の Web ブラウザー エクスペリエンスは、**Power BI サービス**と呼ばれます。"**
 
-### <a name="create-a-workspace-in-the-power-bi-service"></a>Power BI サービスでワークスペースを作成する
+### Power BI サービスでワークスペースを作成する
 
 このタスクでは、ワークスペースを作成します。
 
@@ -101,11 +96,9 @@ lab:
 
     作成されると、ワークスペースが開きます。次のタスクでは、データセットをこのワークスペースに発行します。**
 
-### <a name="open-the-starter-file-in-power-bi-desktop"></a>Power BI Desktop でスターター ファイルを開く
+### Power BI Desktop でスターター ファイルを開く
 
 1. エクスプローラーを開くには、タスク バーで**エクスプローラー**のショートカットを選択します。
-
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image6.png)
 
 2. **D:\DP500\Allfiles\16\Starter** フォルダーに移動します。
 
@@ -115,7 +108,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image7.png)
 
-### <a name="review-the-data-model"></a>データ モデルを確認する
+### データ モデルを確認する
 
 このタスクでは、データ モデルを確認します。
 
@@ -129,7 +122,7 @@ lab:
 
     モデルは、6 つのディメンション テーブルと 1 つのファクト テーブルで構成されます。**Sales** ファクト テーブルには販売注文の詳細が格納されます。これは、クラシック スター スキーマ設計です。**
 
-### <a name="publish-the-data-model"></a>データ モデルを発行する
+### データ モデルを発行する
 
 このタスクでは、データ モデルを発行します。
 
@@ -141,11 +134,7 @@ lab:
 
 2. **[Power BI へ発行]** ウィンドウで、自分のワークスペース (個人用ワークスペースではない) を選んで **[選択]** を選びます。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image11.png)
-
 3. 発行が成功したら、 **[了解]** を選びます。
-
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image12.png)
 
     モデルは、発行されると Power BI データセットになります。このラボでは、このデータセットは、ビジネス アナリストが拡張して特殊なデータセットを作成できるコア データセットです。次の演習では、特定のビジネス要件を解決するための特殊なデータセットを作成します。**
 
@@ -153,23 +142,17 @@ lab:
 
 5. 変更を保存するかどうかを確認するウィンドウで、 **[保存しない]** を選びます。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image13.png)
-
-## <a name="create-a-specialized-dataset"></a>特殊なデータセットを作成する
+## 特殊なデータセットを作成する
 
 この演習では、1 人当たりの米国の売上を分析できるように、特殊なデータセットを作成します。 コア データセットには母集団の値が含まれていないため、モデルを拡張するための新しいテーブルを追加します。
 
-### <a name="create-a-live-connection"></a>ライブ接続を作成する
+### ライブ接続を作成する
 
 このタスクでは、前の演習で発行した **Sales Analysis - Create reusable Power BI artifacts** データセットへのライブ接続を使用する新しいレポートを作成します。
 
 1. Power BI Desktop を開くには、タスク バーにある **Power BI Desktop** のショートカットを選択します。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image14.png)
-
-2. [作業の開始] ウィンドウの右上にある **[X]** を選択します。
-
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image15.png)
+2. 作業の開始ウィンドウを閉じます。
 
 3. ファイルを保存するには、 **[ファイル]** リボンの **[名前を付けて保存]** を選びます。
 
@@ -185,37 +168,39 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image17.png)
 
-8. **[レポートを作成するデータセットの選択]** ウィンドウで、**Sales Analysis - Create reusable Power BI artifacts** データセットを選択します。
+8. **[データ ハブ]** ウィンドウで、**Sales Analysis - Create reusable Power BI artifacts** データセットを選択します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image18.png)
 
-9. **［作成］** を選択します
+9. **[接続]** を選択します。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image19.png)
+10. **[データの接続]** ダイアログで、**Sales Analysis - Create reusable Power BI artifacts** の横にあるボックスを選択し、 **[送信]** を選択して、データ ソースに接続します。
 
-10. 左下のステータス バーで、レポートがデータセットにライブ接続されていることがわかります。
+11. 潜在的なセキュリティ リスクに関するメッセージが表示されたら、通知を読み、 **[OK]** を選択します。
+
+12. 左下のステータス バーで、レポートがデータセットにライブ接続されていることがわかります。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image20.png)
 
-11. **[モデル]** ビューに切り替えます。
+13. **[モデル]** ビューに切り替えます。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image21.png)
 
-12. 必要に応じてモデル図を画面に合わせるには、右下にある **[画面に合わせる]** を選択します。
+14. 必要に応じてモデル図を画面に合わせるには、右下にある **[画面に合わせる]** を選択します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image22.png)
 
-13. テーブル ヘッダーの上にカーソルを置くと、ヒントが表示されます。データ ソースの種類が SQL Server Analysis Services で、サーバーがワークスペースを参照し、データベースがデータセットであることに注意してください。
+15. テーブル ヘッダーの上にカーソルを置くと、ヒントが表示されます。データ ソースの種類が SQL Server Analysis Services で、サーバーがワークスペースを参照し、データベースがデータセットであることに注意してください。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image23.png)
 
     これらのプロパティは、テーブルがリモート モデルでホストされることを示します。次のタスクでは、モデルを拡張するように変更します。このプロセスにより、さまざまな方法で変更できるローカル DirectQuery モデルが作成されます。**
 
-14. Power BI Desktop ファイルを保存します。
+16. Power BI Desktop ファイルを保存します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image24.png)
 
-### <a name="create-a-local-directquery-model"></a>ローカル DirectQuery モデルを作成する
+### ローカル DirectQuery モデルを作成する
 
 このタスクでは、ローカル DirectQuery モデルを作成します。
 
@@ -232,11 +217,13 @@ lab:
 
     これで、モデルが DirectQuery モデルになりました。特定のテーブルまたは列のプロパティを変更するか、計算列を追加することで、モデルを拡張できるようになりました。他のデータ ソースから提供されるデータの新しいテーブルを使用してモデルを拡張することもできます。米国の母集団データをモデルに追加するためのテーブルを追加します。**
 
-3. 任意のテーブル ヘッダーの上にカーソルを置くと、ヒントが表示されます。テーブル ストレージ モードが **DirectQuery** に設定されていることに注意してください。
+3. **[データの接続]** ダイアログで、**Sales Analysis - Create reusable Power BI artifacts** の横にあるボックスにチェック マークが付いていることを確認し、 **[送信]** を選択して、データ ストレージ モードを変更します。
+
+4. 任意のテーブル ヘッダーの上にカーソルを置くと、ヒントが表示されます。テーブル ストレージ モードが **DirectQuery** に設定されていることに注意してください。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image27.png)
 
-### <a name="design-the-report-layout"></a>レポートのレイアウトをデザインする
+### レポートのレイアウトをデザインする
 
 このタスクでは、米国の州の売上を分析するためのレポート レイアウトをデザインします。
 
@@ -244,7 +231,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image28.png)
 
-2. **[フィールド]** ウィンドウ (右側にあります) で、**Reseller** テーブルを展開して開きます。
+2. **[データ]** ウィンドウ (右側にあります) で、**Reseller** テーブルを展開して開きます。
 
 3. **Country-Region** フィールドを右クリックし、 **[フィルターに追加]**  >  **[レポートレベルのフィルター]** を選択します。
 
@@ -262,21 +249,20 @@ lab:
 
 7. ページ全体に表示されるようにテーブルの位置とサイズを変更します。
 
-8. **[フィールド]** ペインで、**Reseller** テーブル内から **State-Province** フィールドをドラッグし、テーブル ビジュアルにドロップします。
+8. **[データ]** ペインで、**Reseller** テーブル内から **State-Province** フィールドをドラッグし、テーブル ビジュアルにドロップします。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image32.png)
 
-9. **[フィールド]** ペインで、**Sales** テーブルを展開し、**Sales Amount** フィールドをテーブル ビジュアルに追加します。
+9. **[データ]** ペインで、**Sales** テーブルを展開し、**Sales Amount** フィールドをテーブル ビジュアルに追加します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image33.png)
 
-10. 売上金額の降順で州を並べ替えるには、**Sales Amount** ヘッダーを選択します。
+10. 売上金額の降順で州を並べ替えるには、**Sum of Sales Amount** ヘッダーを選択します。
 
-    ![](../images/dp500-create-reusable-power-bi-artifacts-image34.png)
 
     このレポート レイアウトで米国の州の売上に関する基本的な詳細情報が示されるようになりました。ただし、追加の要件として、1 人当たりの売上を表示し、そのメジャーの降順で州を並べ替える必要があります。**
 
-### <a name="add-a-table"></a>テーブルの追加
+### テーブルの追加
 
 このタスクでは、Web ページから提供される米国の人口データのテーブルを追加します。
 
@@ -374,7 +360,7 @@ lab:
 
     レポート作成者にテーブルを表示する必要はありません。**
 
-### <a name="add-a-measure"></a>メジャーを追加する
+### メジャーを追加する
 
 このタスクでは、1 人当たりの売上を計算するメジャーを追加します。
 
@@ -382,7 +368,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image53.png)
 
-2. **[フィールド]** ペインで、 **[Sales]** テーブルを右クリックし、 **[新しいメジャー]** を選択します。
+2. **[データ]** ペインで、**Sales** テーブルを右クリックし、 **[新しいメジャー]** を選択します。
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image54.png)
 
@@ -404,7 +390,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image55.png)
 
-5. マトリックス ビジュアルにメジャーを追加するには、 **[フィールド]** ペインの **Sales** テーブル内から、**Sales per Capita** フィールドをテーブル ビジュアルにドラッグします。
+5. マトリックス ビジュアルにメジャーを追加するには、 **[データ]** ペインの **Sales** テーブル内から、**Sales per Capita** フィールドをテーブル ビジュアルにドラッグします。
 
     このメジャーでは、Power BI サービス内のリモート モデルから提供されるデータと、新しいモデルに対してローカルな、インポートされたテーブルのデータを組み合わせることで、結果が評価されます。**
 
@@ -412,7 +398,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image56.png)
 
-### <a name="publish-the-solution"></a>ソリューションの発行
+### ソリューションの発行
 
 このタスクでは、特殊なデータ モデルとレポートで構成されるソリューションを発行します。
 
@@ -438,7 +424,7 @@ lab:
 
     ![](../images/dp500-create-reusable-power-bi-artifacts-image61.png)
 
-### <a name="review-the-specialized-dataset"></a>特殊なデータセットを確認する
+### 特殊なデータセットを確認する
 
 このタスクでは、Power BI サービス内の特殊なデータセットを確認します。
 

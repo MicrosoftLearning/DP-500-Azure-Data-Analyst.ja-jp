@@ -4,9 +4,9 @@ lab:
   module: Optimize enterprise-scale tabular models
 ---
 
-# <a name="use-tools-to-optimize-power-bi-performance"></a>ツールを使用して Power BI のパフォーマンスを最適化する
+# ツールを使用して Power BI のパフォーマンスを最適化する
 
-## <a name="overview"></a>概要
+## 概要
 
 **このラボの推定所要時間: 30 分**
 
@@ -18,8 +18,8 @@ lab:
 
 - DAX Studio を使用する。
 
-## <a name="get-started"></a>はじめに
-### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
+## はじめに
+### このコースのリポジトリを複製する
 
 1. スタート メニューで、コマンド プロンプトを開きます
 
@@ -42,14 +42,14 @@ lab:
    
 1. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
-## <a name="use-best-practice-analyzer"></a>ベスト プラクティス アナライザーを使用する
+## ベスト プラクティス アナライザーを使用する
 
 この演習では、Tabular Editor 2 をインストールし、ベスト プラクティス アナライザー (BPA) ルールを読み込みます。 BPA ルールを確認し、データ モデルに見つかった特定の問題に対処します。
 
 "BPA は無料のサードパーティ製ツールです。モデリングの誤りや、モデルの設計とパフォーマンスを向上させるために行うことができる変更を通知します。これには、パフォーマンスを向上させるために適用できる名前付け、ユーザー エクスペリエンス、一般的な最適化に関する推奨事項が含まれます。詳細については、「[モデルのパフォーマンス向上のためのベスト プラクティス ルール](https://powerbi.microsoft.com/blog/best-practice-rules-to-improve-your-models-performance/)」を参照してください。"**
 
 
-### <a name="download-and-install-tabular-editor-2"></a>Tabular Editor 2 をダウンロードしてインストールする
+### Tabular Editor 2 をダウンロードしてインストールする
 
 計算グループを作成できるようにするために、Tabular Editor 2 をダウンロードしてインストールします。
 
@@ -75,29 +75,19 @@ lab:
 
 1.  **使用許諾契約書**のステップで、同意する場合は **[I agree] (同意する)** を選択し、 **[次へ]** を選択します。
 
-    ![グラフィカル ユーザー インターフェイス、アプリケーション 自動的に生成された説明](../images/image3.png)
-
 1.  **インストール フォルダーの選択**のステップで、 **[次へ]** を選択します。
 
-    ![中程度の信頼度で自動的に生成された形状の説明](../images/image4.png)
-
 1.  **アプリケーション ショートカット**のステップで、 **[次へ]** を選択します。
-
-    ![中程度の信頼度で自動的に生成された形状の説明](../images/image4.png)
 
 1.  **インストールの確認**のステップで、 **[次へ]** を選択します。 
 
     "メッセージが表示されたら、 **[はい]** を選択してアプリによる変更を許可します。"**
 
-    ![中程度の信頼度で自動的に生成された形状の説明](../images/image4.png)
-
 1. インストールが完了したら、**[閉じる]** を選択します。
 
-    ![自動生成された形状の説明を含む図](../images/image5.png)
+    "以上で、Tabular Editor がインストールされ、Power BI Desktop 外部ツールとして登録されました。"**
 
-    "Tabular Editor がインストールされ、Power BI Desktop 外部ツールとして登録されました。"**
-
-### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
+### Power BI Desktop を設定する
 
 このタスクでは、事前に開発された Power BI Desktop ソリューションを開きます。
 
@@ -115,13 +105,13 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image8.png)
 
-7. このリボン タブから Tabular Editor を起動できることに注目してください。
+7. このリボン タブから Tabular Editor を起動できることに注意してください。
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image9.png)
 
     "この演習では後ほど Tabular Editor を使用して BPA を操作します。"**
 
-### <a name="review-the-data-model"></a>データ モデルを確認する
+### データ モデルを確認する
 
 このタスクでは、データ モデルを確認します。
 
@@ -137,7 +127,7 @@ lab:
 
     "この演習では、BPA を使用してモデルの問題を検出し、修正します。"**
 
-### <a name="load-bpa-rules"></a>BPA ルールを読み込む
+### BPA ルールを読み込む
 
 このタスクでは、BPA ルールを読み込みます。
 
@@ -180,7 +170,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image15.png)
 
-### <a name="review-the-bpa-rules"></a>BPA ルールを確認する
+### BPA ルールを確認する
 
 このタスクでは、前のタスクで読み込んだ BPA ルールを確認します。
 
@@ -216,7 +206,7 @@ lab:
 
     ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image19.png)
 
-### <a name="address-bpa-issues"></a>BPA の問題に対処する
+### BPA の問題に対処する
 
 このタスクでは、BPA を開き、チェックの結果を確認します。
 
@@ -296,13 +286,13 @@ lab:
 
     "Tabular Editor の変更を確実に保存するには、Power BI Desktop ファイルも保存する必要があります。"**
 
-## <a name="use-dax-studio"></a>DAX Studio を使用する
+## DAX Studio を使用する
 
 DAX Studio をダウンロードしてインストールします。
 
 "その Web サイトによると、DAX Studio は "Microsoft 表形式モデルに対して DAX クエリを実行および分析するための究極のツール" となっています。DAX の作成、診断、パフォーマンス チューニング、分析のための機能豊富なツールです。機能には、オブジェクトの参照、統合されたトレース、詳細な統計によるクエリ実行の内訳、DAX 構文の強調表示と書式設定が含まれます。"**
 
-### <a name="download-dax-studio"></a>DAX Studio をダウンロードする
+### DAX Studio をダウンロードする
 
 このタスクでは、DAX Studio をダウンロードします。
 
@@ -354,15 +344,13 @@ DAX Studio をダウンロードしてインストールし、DAX クエリを�
 
 1. 必要に応じて、DAX Studio ウィンドウを最大化します。
 
-### <a name="use-dax-studio-to-optimize-a-query"></a>DAX Studio を使用してクエリを最適化する
+### DAX Studio を使用してクエリを最適化する
 
 このタスクでは、改善されたメジャーの数式を使用してクエリを最適化します。
 
 "データ モデルの容量が小さい場合、クエリを最適化するのは難しいことに注意してください。この演習は、DAX クエリを最適化することよりも、DAX Studio を使用することに重点を置いています。"**
 
-1. **[File] (ファイル)** リボン タブで、 **[Browse] (参照)** を選択します。
-
-    ![](../images/dp500-use-tools-to-optimize-power-bi-performance-image32.png)
+1. **[ファイル]** メニューで、 **[参照]** を選択します。
 
 2. **[Open] (開く)** ウィンドウで、**D:\DP500\Allfiles\13\Assets** フォルダーに移動します。
 
@@ -422,7 +410,7 @@ DAX Studio をダウンロードしてインストールし、DAX クエリを�
 
     "この場合、変数とタイム インテリジェンス関数を使用した "better" のクエリの方がパフォーマンスが良く、クエリの実行時間がほぼ 50% 短縮されたと判断できます。"**
 
-### <a name="finish-up"></a>仕上げ
+### 仕上げ
 
 このタスクでは、完了作業を行います。
 

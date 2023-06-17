@@ -4,9 +4,9 @@ lab:
   module: Design and build tabular models
 ---
 
-# <a name="enforce-model-security"></a>モデル セキュリティを適用する
+# モデル セキュリティを適用する
 
-## <a name="overview"></a>概要
+## 概要
 
 **このラボの推定所要時間: 45 分**
 
@@ -22,11 +22,11 @@ lab:
 
 - セキュリティ プリンシパルをデータセットのロールにマップします。
 
-## <a name="get-started"></a>はじめに
+## はじめに
 
 この演習では、環境を準備します。
 
-### <a name="clone-the-repository-for-this-course"></a>このコースのリポジトリを複製する
+### このコースのリポジトリを複製する
 
 1. スタート メニューで、コマンド プロンプトを開きます
 
@@ -49,13 +49,11 @@ lab:
    
 1. エクスプローラーで D ドライブを開き、ファイルがダウンロードされていることを確認します。
 
-### <a name="set-up-power-bi-desktop"></a>Power BI Desktop を設定する
+### Power BI Desktop を設定する
 
 このタスクでは、Power BI Desktop を設定します。
 
 1. エクスプローラーを開くには、タスク バーの **[エクスプローラー]** ショートカットを選びます。
-
-    ![](../images/dp500-enforce-model-security-image1.png)
 
 2. **D:\DP500\Allfiles\09\Starter** フォルダーに移動します。
 
@@ -73,7 +71,7 @@ lab:
 
     行レベル セキュリティを適用するように、Power BI Desktop ソリューションを更新します。**
 
-### <a name="sign-in-to-the-power-bi-service"></a>Power BI サービスにサインインする
+### Power BI サービスにサインインする
 
 このタスクでは、Power BI サービスにサインインし、試用版ライセンスを開始して、ワークスペースを作成します。
 
@@ -91,14 +89,11 @@ lab:
 
 4. メッセージが表示されたら、 **[無料体験する]** を選択します。
 
-    ![](../images/dp500-enforce-model-security-image4.png)
-
 5. 残りのタスクをすべて行って、試用版のセットアップを完了します。
 
     "ヒント: Power BI の Web ブラウザー エクスペリエンスは、**Power BI サービス**と呼ばれます。"**
 
-
-### <a name="create-a-workspace"></a>ワークスペースの作成
+### ワークスペースの作成
 
 このタスクでは、ワークスペースを作成します。
 
@@ -115,11 +110,9 @@ lab:
 
 3. **[保存]** を選択します。
 
-    ![](../images/dp500-enforce-model-security-image7.png)
-
     作成されると、ワークスペースが開きます。後の演習では、データセットをこのワークスペースに発行します。**
 
-### <a name="review-the-data-model"></a>データ モデルを確認する
+### データ モデルを確認する
 
 このタスクでは、データ モデルを確認します。
 
@@ -142,11 +135,11 @@ lab:
 
     **Region** 列には、Adventure Works の営業地域が格納されます。この組織では、営業担当者は、割り当てられた営業地域に関連するデータのみを表示できます。このラボでは、データのアクセス許可を適用するために、2 つの異なる行レベル セキュリティ手法を実装します。**
 
-## <a name="create-static-roles"></a>静的ロールを作成する
+## 静的ロールを作成する
 
 この演習では、静的ロールを作成して検証した後、セキュリティ プリンシパルをデータセットのロールにマップする方法を説明します。
 
-### <a name="create-static-roles"></a>静的ロールを作成する
+### 静的ロールを作成する
 
 このタスクでは、2 つの静的ロールを作成します。
 
@@ -199,7 +192,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image20.png)
 
-### <a name="validate-the-static-roles"></a>静的ロールを検証する
+### 静的ロールを検証する
 
 このタスクでは、静的ロールの 1 つを検証します。
 
@@ -228,7 +221,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image26.png)
 
-### <a name="publish-the-report"></a>レポートを発行する
+### レポートを発行する
 
 このタスクでは、レポートを発行します。
 
@@ -249,7 +242,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image30.png)
 
-### <a name="configure-row-level-security-optional"></a>行レベルのセキュリティを構成する ("省略可能")**
+### 行レベルのセキュリティを構成する ("省略可能")**
 
 このタスクでは、Power BI サービスで行レベル セキュリティを構成する方法について説明します。 
 
@@ -297,7 +290,7 @@ lab:
 8. ワークスペースのランディング ページに戻るには、**ナビゲーション** ウィンドウでワークスペースを選びます。
 
 
-### <a name="clean-up-the-solution"></a>ソリューションをクリーンアップする
+### ソリューションをクリーンアップする
 
 このタスクでは、データセットとモデルのロールを削除してソリューションをクリーンアップします。
 
@@ -333,11 +326,11 @@ lab:
     ![](../images/dp500-enforce-model-security-image42.png)
 
 
-## <a name="create-a-dynamic-role"></a>動的ロールを作成する
+## 動的ロールを作成する
 
 この演習では、モデルにテーブルを追加し、動的ロールを作成して検証してから、セキュリティ プリンシパルをデータセットのロールにマップします。
 
-### <a name="add-the-salesperson-table"></a>Salesperson テーブルを追加する
+### Salesperson テーブルを追加する
 
 このタスクでは、**Salesperson** テーブルをモデルに追加します。
 
@@ -416,7 +409,7 @@ lab:
 
 17. テーブルがモデルに追加されると、**Sales Territory** テーブルへのリレーションシップが自動的に作成されることに注意してください。
 
-### <a name="configure-the-relationship"></a>リレーションシップを構成する
+### リレーションシップを構成する
 
 このタスクでは、新しいリレーションシップのプロパティを構成します。
 
@@ -444,7 +437,7 @@ lab:
     **Salesperson** テーブルの目的は、データのアクセス許可を適用することです。非表示にすると、レポート作成者と Q&A エクスペリエンスにテーブルまたはそのフィールドは表示されません。**
  
 
-### <a name="create-a-dynamic-role"></a>動的ロールを作成する
+### 動的ロールを作成する
 
 このタスクでは、モデル内のデータに基づいてアクセス許可を適用する動的ロールを作成します。
 
@@ -482,7 +475,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image67.png)
 
-### <a name="validate-the-dynamic-role"></a>動的ロールを検証する
+### 動的ロールを検証する
 
 このタスクでは、動的ロールを検証します。
 
@@ -518,7 +511,7 @@ lab:
 
     ![](../images/dp500-enforce-model-security-image74.png)
 
-### <a name="finalize-the-design"></a>設計を完成させる
+### 設計を完成させる
 
 このタスクでは、レポートを発行し、セキュリティ グループをロールにマッピングすることで、設計を完成させます。
 
