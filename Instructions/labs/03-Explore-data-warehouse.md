@@ -4,17 +4,17 @@ lab:
   module: 'Model, query, and explore data in Azure Synapse'
 ---
 
-# <a name="explore-a-relational-data-warehouse"></a>リレーショナル データ ウェアハウスについて調べる
+# リレーショナル データ ウェアハウスについて調べる
 
 Azure Synapse Analytics は、エンタープライズ データ ウェアハウスをサポートするスケーラブルなセット機能に基づいて構築されています。これには、データ レイクや大規模なリレーショナル データ ウェアハウスでのファイル ベースのデータ分析と、それらの読み込みに使用されるデータ転送および変換パイプラインが含まれます。 このラボでは、Azure Synapse Analytics の専用 SQL プールを使用して、リレーショナル データ ウェアハウスにデータを格納および照会する方法について説明します。
 
 このラボは完了するまで、約 **45** 分かかります。
 
-## <a name="before-you-start"></a>開始する前に
+## 開始する前に
 
 管理レベルのアクセス権を持つ [Azure サブスクリプション](https://azure.microsoft.com/free)が必要です。
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>Azure Synapse Analytics ワークスペースをプロビジョニングする
+## Azure Synapse Analytics ワークスペースをプロビジョニングする
 
 Azure Synapse Analytics "ワークスペース"は、データとデータ処理ランタイムを管理するための一元的な場所を提供するものです。** Azure portal の対話型インターフェイスを使用してワークスペースをプロビジョニングすることも、スクリプトまたはテンプレートを使用してワークスペースとその中のリソースをデプロイすることもできます。 ほとんどの運用シナリオでは、スクリプトとテンプレートを使用してプロビジョニングを自動化し、反復可能な開発と運用 ("DevOps") プロセスにリソースのデプロイを組み込めるようにすることをお勧めします。**
 
@@ -50,11 +50,11 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 
 8. スクリプトの完了まで待ちます。通常、約 15 分かかりますが、さらに時間がかかる場合もあります。 待っている間、Azure Synapse Analytics ドキュメントの記事「[Azure Synapse Analytics の専用 SQL プールとは](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is)」を確認してください。
 
-## <a name="explore-the-data-warehouse-schema"></a>データ ウェアハウス スキーマを調べる
+## データ ウェアハウス スキーマを調べる
 
 このラボでは、データ ウェアハウスは Azure Synapse Analytics の専用 SQL プールでホストされます。
 
-### <a name="start-the-dedicated-sql-pool"></a>専用 SQL プールを起動する
+### 専用 SQL プールを起動する
 
 1. スクリプトが完了したら、Azure portal で、作成された **dp500-*xxxxxxx*** リソース グループに移動して、Synapse ワークスペースを選択します。
 2. Synapse ワークスペースの **[概要]** ページの **[Synapse Studio を開く]** カードで **[開く]** を選択し、新しいブラウザー タブで Synapse Studio を開きます。メッセージが表示された場合はサインインします。
@@ -62,7 +62,7 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 4. **[管理]** ページで、 **[SQL プール]** タブが選択されていることを確認した後、専用 SQL プール **sql*xxxxxxx*** を選択し、 **&#9655;** アイコンを使用して起動します。メッセージが表示されたら、再開することを確認します。
 5. SQL プールが再開されるまで待ちます。 これには数分かかることがあります。 **&#8635; [更新]** ボタンを使用して、その状態を定期的に確認してください。 準備ができると、状態が **[オンライン]** と表示されます。
 
-### <a name="view-the-tables-in-the-database"></a>データベース内のテーブルを表示する
+### データベース内のテーブルを表示する
 
 1. Synapse Studio で、 **[データ]** ページを選択し、 **[ワークスペース]** タブが選択されていることと、 **[SQL データベース]** カテゴリが含まれていることを確認します。
 2. **[SQL データベース]** 、 **[sql*xxxxxxx]** * プール、およびその **[Tables]** フォルダーを展開して、データベース内のテーブルを表示します。
@@ -85,11 +85,11 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 
     データ ウェアハウスの時間ディメンションは、通常、ファクト テーブル内のメジャーを集計するための最小時間単位 (ディメンションの "グレイン" と呼ばれます) ごとの行を含んだディメンション テーブルとして実装されます。** この場合、メジャーを集計できる最も低いグレインは個々の日付であり、テーブルには、データで参照される最初の日付から最後の日付までの各日付の行が含まれます。 **DimDate** テーブルの属性を使用すると、アナリストは、一貫性のある一連のテンポラル属性を使用し、ファクト テーブル内の日付キーに基づいてメジャーを集計できます (たとえば、注文日に基づいて月単位で注文を表示するなど)。 **FactInternetSales** テーブルには、**DimDate** テーブルに関連する 3 つのキー (**OrderDateKey**、**DueDateKey**、**ShipDateKey**) が含まれています。
 
-## <a name="query-the-data-warehouse-tables"></a>データ ウェアハウス テーブルの作成
+## データ ウェアハウス テーブルの作成
 
 データ ウェアハウス スキーマの特に重要な側面についておわかりいただけたと思うので、次は、テーブルのクエリを実行してデータを取得してみましょう。
 
-### <a name="query-fact-and-dimension-tables"></a>ファクト テーブルとディメンション テーブルに対してクエリを実行する
+### ファクト テーブルとディメンション テーブルに対してクエリを実行する
 
 リレーショナル データ ウェアハウス内の数値は、関連するディメンション テーブルと共にファクト テーブルに格納され、複数の属性でデータを集計できるようになっています。 このような設計であるため、リレーショナル データ ウェアハウスのほとんどのクエリでは、(JOIN 句を使用して) 関連するテーブル間で (集計関数と GROUP BY 句を使用して) データが集計およびグループ化されます。
 
@@ -160,7 +160,7 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 
 8. スクリプトを発行して保存します。
 
-### <a name="use-ranking-functions"></a>順位付け関数を使用する
+### 順位付け関数を使用する
 
 大量のデータを分析する際のもう 1 つの一般的な要件は、パーティションごとにデータをグループ化し、特定のメトリックに基づいてパーティション内の各エンティティの "ランク" を決定することです。**
 
@@ -246,7 +246,7 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 
 > **ヒント**: ROW_NUMBER と RANK は、Transact-SQL で使用できるランク付け関数の例です。 詳細については、Transact-SQL 言語ドキュメントの[ランク付け関数](https://docs.microsoft.com/sql/t-sql/functions/ranking-functions-transact-sql)のリファレンスを参照してください。
 
-### <a name="retrieve-an-approximate-count"></a>概算数を取得する
+### 概算数を取得する
 
 非常に大量のデータを探索する場合、クエリの実行にかなりの時間とリソースが必要になる場合があります。 多くの場合、データ分析では完全に正確な値は必要ありません。近似値の比較で十分な場合があります。
 
@@ -283,7 +283,7 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 
 > **ヒント**: 詳しくは、[APPROX_COUNT_DISTINCT](https://docs.microsoft.com/sql/t-sql/functions/approx-count-distinct-transact-sql) 関数の資料を参照してください。
 
-## <a name="challenge---analyze-reseller-sales"></a>チャレンジ - リセラーの売上を分析する
+## チャレンジ - リセラーの売上を分析する
 
 1. SQL プール **sql*xxxxxxx*** に対する新しい空のスクリプトを作成し、「**Analyze Reseller Sales**」という名前で保存します。
 2. スクリプトで SQL クエリを作成し、**FactResellerSales** ファクト テーブルと、それが関連付けられているディメンション テーブルに基づいて、次の情報を検索します。
@@ -298,7 +298,7 @@ Azure Synapse Analytics "ワークスペース"は、データとデータ処理
 3. 興味があれば、色々なクエリを試して、データ ウェアハウス スキーマ内の残りのテーブルを調べてみてください。
 4. 完了したら、 **[管理]** ページで、専用 SQL プール **sql*xxxxxxx*** を一時停止します。
 
-## <a name="delete-azure-resources"></a>Azure リソースを削除する
+## Azure リソースを削除する
 
 Azure Synapse Analytics を調べ終わったら、不要な Azure コストを避けるために、作成したリソースを削除する必要があります。
 
