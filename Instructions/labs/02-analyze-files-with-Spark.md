@@ -4,17 +4,17 @@ lab:
   module: 'Model, query, and explore data in Azure Synapse'
 ---
 
-# <a name="analyze-data-in-a-data-lake-with-spark"></a>Spark を使用してデータ レイク内のデータを分析する
+# Spark を使用してデータ レイク内のデータを分析する
 
 Apache Spark は、分散データ処理を行うためのオープン ソース エンジンであり、データ レイク ストレージ内の膨大な量のデータを探索、処理、分析するために広く使用されています。 Spark は、Azure HDInsight、Azure Databricks、Microsoft Azure クラウド プラットフォームの Azure Synapse Analytics など、多くのデータ プラットフォーム製品で処理オプションとして使用することができます。 Java、Scala、Python、SQL など、幅広いプログラミング言語に対応していることが Spark の利点の 1 つであり、これにより Spark は、データ クレンジングと操作、統計分析と機械学習、データ分析と視覚化など、データ処理ワークロードのソリューションとして高い柔軟性を実現しています。
 
 このラボは完了するまで、約 **45** 分かかります。
 
-## <a name="before-you-start"></a>開始する前に
+## 開始する前に
 
 管理レベルのアクセス権を持つ [Azure サブスクリプション](https://azure.microsoft.com/free)が必要です。
 
-## <a name="provision-an-azure-synapse-analytics-workspace"></a>Azure Synapse Analytics ワークスペースをプロビジョニングする
+## Azure Synapse Analytics ワークスペースをプロビジョニングする
 
 データ レイク ストレージへのアクセス権を持つ Azure Synapse Analytics ワークスペースと、データ レイク内のファイルのクエリ実行と処理に使用できる Apache Spark プールが必要です。
 
@@ -50,11 +50,11 @@ Apache Spark は、分散データ処理を行うためのオープン ソース
 
 8. スクリプトの完了まで待ちます。通常、約 10 分かかりますが、さらに時間がかかる場合もあります。 待っている間、Azure Synapse Analytics ドキュメントの「[Azure Synapse Analytics での Apache Spark](https://docs.microsoft.com/azure/synapse-analytics/spark/apache-spark-overview)」の記事を確認してください。
 
-## <a name="query-data-in-files"></a>ファイル内のデータのクエリを実行する
+## ファイル内のデータのクエリを実行する
 
 このスクリプトを使用すると、Azure Synapse Analytics ワークスペースと、データ レイクをホストする Azure Storage アカウントがプロビジョニングされ、いくつかのデータ ファイルがデータ レイクにアップロードされます。
 
-### <a name="view-files-in-the-data-lake"></a>データ レイク内のファイルを表示する
+### データ レイク内のファイルを表示する
 
 1. スクリプトが完了したら、Azure portal で、作成された **dp500-*xxxxxxx*** リソース グループに移動して、Synapse ワークスペースを選択します。
 2. Synapse ワークスペースの **[概要]** ページの **[Synapse Studio を開く]** カードで **[開く]** を選択し、新しいブラウザー タブで Synapse Studio を開きます。メッセージが表示された場合はサインインします。
@@ -66,7 +66,7 @@ Apache Spark は、分散データ処理を行うためのオープン ソース
 8. **sales** フォルダーと **orders** フォルダーを開き、3 年間の売上データの .csv ファイルが **orders** フォルダーに含まれていることを確認します。
 9. いずれかのファイルを右クリックし、 **[プレビュー]** を選択して、そこに含まれているデータを表示します。 ファイルにはヘッダー行が含まれていないため、列ヘッダーを表示するには、オプションの選択を解除することに注意してください。
 
-### <a name="use-spark-to-explore-data"></a>Spark を使用してデータを探索する
+### Spark を使用してデータを探索する
 
 1. **orders** フォルダー内でいずれかのファイルを選択したら、ツールバーの **[新しいノートブック]** の一覧で **[データフレームに読み込む]** を選択します。 データフレームは、表形式データセットを表す Spark の構造です。
 2. 新しく開いた **[Notebook 1]** タブ内の **[アタッチ先]** の一覧で、Spark プール (**spark*xxxxxxx***) を選択します。 次に、 **&#9655; [すべて実行]** ボタンを使用して、ノートブック内のすべてのセル (現時点では 1 つしかありません) を実行します。
@@ -129,11 +129,11 @@ Apache Spark は、分散データ処理を行うためのオープン ソース
 
 9. 新しいセルを実行し、そのデータフレームのスキーマが、定義した **orderSchema** に一致していることを確認します。 自動的に推論されたスキーマを持つデータフレームを使用する場合には、**printSchema** 関数が便利です。
 
-## <a name="analyze-data-in-a-dataframe"></a>データフレーム内のデータを分析する
+## データフレーム内のデータを分析する
 
 Spark の **dataframe** オブジェクトは、Python の Pandas データフレームに似ています。このオブジェクトには、そこに存在するデータの操作、フィルター処理、グループ化、または分析に使用できるさまざまな関数が含まれています。
 
-### <a name="filter-a-dataframe"></a>データフレームをフィルター処理する
+### データフレームをフィルター処理する
 
 1. ノートブックに新しいコード セルを追加し、そこに次のコードを入力します。
 
@@ -160,7 +160,7 @@ Spark の **dataframe** オブジェクトは、Python の Pandas データフ�
 
 4. この変更したコードを実行すると、"*Road-250 Red, 52*" という製品を購入した顧客が表示されます。 複数の関数を "チェーン" にすると、1 つの関数の出力が次の関数の入力になることに注意してください。この場合、**select** メソッドによって作成されたデータフレームは、フィルター条件を適用するために使用される **where** メソッドのソース データフレームとなります。
 
-### <a name="aggregate-and-group-data-in-a-dataframe"></a>データフレーム内のデータを集計してグループ化する
+### データフレーム内のデータを集計してグループ化する
 
 1. ノートブックに新しいコード セルを追加し、そこに次のコードを入力します。
 
@@ -180,11 +180,11 @@ Spark の **dataframe** オブジェクトは、Python の Pandas データフ�
 
 4. 追加したコード セルを実行し、その結果が 1 年あたりの販売注文数を示していることに注意してください。 **select** メソッドには *OrderDate* フィールドの year コンポーネントを抽出するための SQL **year** 関数が含まれており、抽出された year 値に列名を割り当てるために **alias** メソッドが使用されていることに注意してください。 次に、データは派生 *Year* 列によってグループ化され、各グループの行数が計算されます。その後、結果として生成されたデータフレームを並べ替えるために、最後に **orderBy** メソッドが使用されます。
 
-## <a name="query-data-using-spark-sql"></a>Spark SQL を使用してデータのクエリを実行する
+## Spark SQL を使用してデータのクエリを実行する
 
 ここまで確認してきたように、データフレーム オブジェクトのネイティブ メソッドを使用すると、データのクエリの実行と分析を効率的に行うことができます。 ただし、SQL 構文の方が扱いやすいと考えるデータ アナリストも多くいます。 Spark SQL は、Spark の SQL 言語 API であり、SQL ステートメントの実行だけではなく、リレーショナル テーブル内でのデータの永続化にも使用できます。
 
-### <a name="use-spark-sql-in-pyspark-code"></a>PySpark コードで Spark SQL を使用する
+### PySpark コードで Spark SQL を使用する
 
 Azure Synapse Studio ノートブックの既定の言語は、Spark ベースの Python ランタイムである PySpark です。 このランタイム内に **spark.sql** ライブラリを使用すると、Python コード内に Spark SQL 構文を埋め込んだり、テーブルやビューなどの SQL コンストラクトを扱ったりすることができます。
 
@@ -202,7 +202,7 @@ Azure Synapse Studio ノートブックの既定の言語は、Spark ベース�
     - 次に、**spark.sql** メソッドを使用して、**salesorders** ビューに対して SQL クエリが実行されます。
     - クエリの結果は、データフレームに格納されます。
 
-### <a name="run-sql-code-in-a-cell"></a>SQL コードをセル内で実行する
+### SQL コードをセル内で実行する
 
 PySpark コードが含まれているセルに SQL ステートメントを埋め込むことができるのは便利ですが、データ アナリストにとっては、SQL で直接作業できればよいという場合も多くあります。
 
@@ -224,11 +224,11 @@ PySpark コードが含まれているセルに SQL ステートメントを埋�
 
 > **注**: Spark SQL とデータフレームの詳細については、[Spark SQL のドキュメント](https://spark.apache.org/docs/2.2.0/sql-programming-guide.html)を参照してください。
 
-## <a name="visualize-data-with-spark"></a>Spark を使用してデータを視覚化する
+## Spark を使用してデータを視覚化する
 
 画像が何千もの言葉を語り、表が何千行にも及ぶデータよりもわかりやすいことは、だれもが知っています。 Azure Synapse Analytics のノートブックには、データフレームまたは Spark SQL クエリから表示されるデータのグラフ ビューが組み込まれていますが、これは包括的なグラフ作成を目的としたものではありません。 ただし、**matplotlib** や **seaborn** などの Python グラフィックス ライブラリを使用して、データフレーム内のデータからグラフを作成することができます。
 
-### <a name="view-results-as-a-chart"></a>結果をグラフで表示する
+### 結果をグラフで表示する
 
 1. ノートブックに新しいコード セルを追加し、そこに次のコードを入力します。
 
@@ -251,7 +251,7 @@ PySpark コードが含まれているセルに SQL ステートメントを埋�
 
     ![製品の合計注文数別の横棒グラフ](../images/notebook-chart.png)
 
-### <a name="get-started-with-matplotlib"></a>**matplotlib** の使用を開始する
+### **matplotlib** の使用を開始する
 
 1. ノートブックに新しいコード セルを追加し、そこに次のコードを入力します。
 
@@ -370,7 +370,7 @@ PySpark コードが含まれているセルに SQL ステートメントを埋�
 
 > **注**: matplotlib を使用したプロットの詳細については、[matplotlib のドキュメント](https://matplotlib.org/)を参照してください。
 
-### <a name="use-the-seaborn-library"></a>**seaborn** ライブラリを使用する
+### **seaborn** ライブラリを使用する
 
 **matplotlib** を使用すると、複数の種類の複雑なグラフを作成することができますが、優れた結果を得るには、複雑なコードを必要とする場合があります。 このため、複雑性の抽象化と機能の強化を目的に、matplotlib のベース上に数多くの新しいライブラリが何年もかけて構築されてきました。 そのようなライブラリの 1 つに **seaborn** があります。
 
@@ -419,7 +419,7 @@ PySpark コードが含まれているセルに SQL ステートメントを埋�
 
 > **注**: seaborn を使用したプロットの詳細については、[seaborn のドキュメント](https://seaborn.pydata.org/index.html)を参照してください。
 
-## <a name="delete-azure-resources"></a>Azure リソースを削除する
+## Azure リソースを削除する
 
 Azure Synapse Analytics を調べ終わったら、不要な Azure コストを避けるために、作成したリソースを削除する必要があります。
 
