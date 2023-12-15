@@ -201,7 +201,7 @@ lab:
 
 1. Synapse 接続の設定を入力します。
 
-     - Azure Portal からサーバー名を入力します 
+     - Azure Portal からサーバー名を入力します
      
      ![](../images/synapse-sql-pool-connection-string.png)
      
