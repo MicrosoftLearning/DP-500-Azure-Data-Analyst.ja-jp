@@ -349,7 +349,7 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image32.png)
 
-###  クエリのフィルター処理
+### クエリのフィルター処理
 
 このタスクでは、**Sales** クエリにフィルターを追加します。
 
