@@ -1,3 +1,5 @@
+**このコースは **2024 年 4 月 30 日**に廃止されます。コースが廃止されると、すべての GitHub リポジトリが削除されます。よろしくお願いいたします。**
+
 # DP-500: Microsoft Azure を使用した Enterprise-Scale Analytics ソリューションの設計および実装
 
 - **あなたは MCT ですか?** - [MCT 向けの GitHub ユーザー ガイド](https://microsoftlearning.github.io/MCT-User-Guide/)をご覧ください
