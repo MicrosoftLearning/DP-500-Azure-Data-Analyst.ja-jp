@@ -235,7 +235,7 @@ lab:
     "ヒント: すべての数式は、**D:\DP500\Allfiles\13\Assets\Snippets.txt** からコピーして貼り付けることができます。"**
 
     ```
-    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )C#
+    DIVIDE ( [Profit], SUM ( 'Sales'[Sales Amount] ) )
     ```
 
 7. モデルの変更を保存するには、ツール バーの **[Save changes to the connected database] (接続されているデータベースに変更を保存)** コマンドを選択します (または **Ctrl + S** キーを押します)。
