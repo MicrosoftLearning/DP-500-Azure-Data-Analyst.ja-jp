@@ -1,4 +1,4 @@
-**このコースは **2024 年 4 月 30 日**に廃止されます。このリポジトリで、issue と pull request を監視しなくなりました。コースが廃止されると、すべての GitHub リポジトリが削除されます。関連するコンテンツは、[Microsoft Fabric リポジトリ](https://github.com/MicrosoftLearning/mslearn-fabric)** にあります。
+## **このコースは **2024 年 4 月 30 日**に廃止されます。このリポジトリで、issue と pull request を監視しなくなりました。コースが廃止されると、すべての GitHub リポジトリが削除されます。関連するコンテンツは、[Microsoft Fabric リポジトリ](https://github.com/MicrosoftLearning/mslearn-fabric)と [DP-203 Azure データ エンジニア リポジトリ](https://github.com/MicrosoftLearning/dp-203-azure-data-engineer)にあります。**
 
 # DP-500: Microsoft Azure を使用した Enterprise-Scale Analytics ソリューションの設計および実装
 
