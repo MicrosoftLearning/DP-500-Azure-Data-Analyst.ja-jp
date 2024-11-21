@@ -28,8 +28,8 @@ lab:
 
    > **注**: git クローンを使ってデータを Azure Synapse Analytics に既に読み込んでいる場合は、このタスクをスキップして **Power BI のセットアップ**に進んでかまいません。
 
-1. VM の右側にある [リソース] タブのログイン情報を使って、[Azure portal](https://portal.azure.com) にサインインします。
-2. ページ上部の検索バーの右側にある **[\>_]** ボタンを使用して、Azure portal に新しい Cloud Shell を作成します。メッセージが表示されたら、***PowerShell*** 環境を選んで、ストレージを作成します。 次に示すように、Azure portal の下部にあるペインに、Cloud Shell のコマンド ライン インターフェイスが表示されます。
+1. 組織の資格情報 (または提供されたもの) を使用して、[Azure portal](https://portal.azure.com) にサインインします。
+2. ページ上部の検索バーの右側にある **[\>_]** ボタンを使用して、Azure portal に新しい Cloud Shell を作成します。メッセージが表示された場合は、***PowerShell*** 環境を選択して、ストレージを作成します。 次に示すように、Azure portal の下部にあるペインに、Cloud Shell のコマンド ライン インターフェイスが表示されます。
 
     ![Azure portal と Cloud Shell のペイン](../images/cloud-shell.png)
 
@@ -85,7 +85,7 @@ lab:
 
 2. 右上にある **[X]** を選択して、作業の開始ウィンドウを閉じます。
 
-3. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選択します。 ラボの資格情報を使用してサインイン プロセスを完了します。
+3. まだサインインしていない場合は、Power BI Desktop の右上隅にある **[サインイン]** を選択します。 組織の資格情報 (または提供されたラボの資格情報) を使用して、サインイン プロセスを完了します。
 
 4. Microsoft Edge の Power BI サインアップ ページにリダイレクトされます。 **[続行]** を選択してサインアップを完了します。
 
@@ -401,9 +401,9 @@ lab:
 
 - **EnglishProductName** を **Product**
 
-- **Product Details.EnglishProductCategoryName** を**サブカテゴリ**として
+- **Product Details.EnglishProductCategoryName** を**カテゴリ**として
 
-- **製品の詳細。** **カテゴリ**として
+- **Product Details.EnglishProductSubcategoryName** を**サブカテゴリ**として
 
 45. 以下を除くすべての列を削除します。
 

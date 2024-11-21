@@ -607,15 +607,19 @@ lab:
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image71.png)
 
-9. スクリプトを確認します。
+9. SQL Server Management Studio のツール バーのドロップダウン メニューを使用して、データベース コンテキストを `master` から `AdventureWorksDW2022-DP500` に変更する
+
+    ![](../images/dp500-improve-performance-with-hybrid-tables-image72a.png)
+   
+10. スクリプトを確認します。
 
     "このスクリプトでは、今日を注文日として使用して、1 件の注文を **FactInternetSales** テーブルに挿入します。"**
 
-10. スクリプトを実行するには、ツール バーで **[実行]** を選択します (または **F5** キーを押します)。
+11. スクリプトを実行するには、ツール バーで **[実行]** を選択します (または **F5** キーを押します)。
 
     ![](../images/dp500-improve-performance-with-hybrid-tables-image72.png)
 
-11. ファイルを閉じるには、 **[ファイル]** メニューで **[閉じる]** を選択します。
+12. ファイルを閉じるには、 **[ファイル]** メニューで **[閉じる]** を選択します。
 
 ### レポートを更新する
 
